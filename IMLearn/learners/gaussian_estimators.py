@@ -3,8 +3,7 @@ import numpy as np
 from numpy.linalg import inv, det, slogdet
 
 def _pdf(x, *args):
-    inv_cov = args
-    return np.exp(-0.5 * np.dot(x, inv_cov @ x))
+    pass
 
 class UnivariateGaussian:
 
@@ -56,7 +55,7 @@ class UnivariateGaussian:
         estimator is either biased or unbiased). Then sets `self.fitted_` attribute to `True`
         """
         self.mu_ = np.mean(X)
-        self.var_ = np.var(X)
+        self.var_ = np.var(X) if self.biased_ else np.var(X, ddof=1)
         self.fitted_ = True
         return self
 
@@ -104,8 +103,11 @@ class UnivariateGaussian:
         log_likelihood: float
             log-likelihood calculated
         """
-        arr = -0.5 * (1 + np.log(np.pi) + 2*np.log(sigma) + ((X - mu) / sigma)**2)
-        return np.sum(arr)
+        m, = X.shape      # d-Dimensional of m Samples
+        const = m * np.log((2*np.pi)*(sigma**2))
+        mu = np.tile(mu, m).reshape(X.shape)
+        sum = np.sum((X-mu)**2)
+        return -0.5 * (const + sum)
 
 
 class MultivariateGaussian:
@@ -177,10 +179,13 @@ class MultivariateGaussian:
         if not self.fitted_:
             raise ValueError("Estimator must first be fitted before calling `pdf` function")
 
-        _, dim = X.shape
-        normalizer = np.sqrt((2*np.pi) ** dim) * det(self.cov_)
+        m, d = X.shape      # d-Dimensional of m Samples
+        normalizer = np.sqrt((2*np.pi) ** d * det(self.cov_))
         inv_cov = inv(self.cov_)
-        return np.apply_along_axis(_pdf, 1, X - self.mu_, inv_cov) / normalizer
+        mu = np.tile(self.mu_, m).reshape(X.shape)
+        ex = np.sum(-0.5 * (X-mu) @ inv_cov * (X-mu),axis=1)
+        nominator = np.exp(-0.5 * ex)
+        return nominator / normalizer
 
     @staticmethod
     def log_likelihood(mu: np.ndarray, cov: np.ndarray, X: np.ndarray) -> float:
@@ -201,7 +206,11 @@ class MultivariateGaussian:
         log_likelihood: float
             log-likelihood calculated over all input data and under given parameters of Gaussian
         """
-        n, dim = X.shape
-        const = n * (dim * np.log(2*np.pi) + slogdet(cov))
-        sum = np.sum(np.apply_along_axis(_pdf, 1, X - mu, inv(cov)))
+
+        m, d = X.shape      # d-Dimensional of m Samples
+        det = slogdet(cov)
+        const = (m * d * np.log(2*np.pi)) + (det[0] * det[1])
+        inv_cov = inv(cov)
+        mu = np.tile(mu, m).reshape(X.shape)
+        sum = np.sum((X-mu) @ inv_cov * (X-mu))
         return -0.5 * (const + sum)

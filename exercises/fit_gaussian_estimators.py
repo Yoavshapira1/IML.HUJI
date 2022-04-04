@@ -1,4 +1,5 @@
 from IMLearn.learners import UnivariateGaussian, MultivariateGaussian
+from matplotlib import pyplot as plt
 import numpy as np
 import plotly.graph_objects as go
 import plotly.io as pio
@@ -12,6 +13,13 @@ def test_univariate_gaussian():
     X = np.random.normal(10, 1, 1000)
     MLE.fit(X)
     print(MLE.mu_, MLE.var_)
+
+    # Quiz q.3
+    A = np.array([1, 5, 2, 3, 8, -4, -2, 5, 1, 10, -10, 4, 5, 2, 7, 1, 1, 3, 2, -1, -3, 1, -4, 1, 2, 1,
+                  -4, -4, 1, 3, 2, 6, -6, 8, 3, -6, 4, 1, -2, 3, 1, 4, 1, 4, -2, 3, -1, 0, 3, 5, 0, -2])
+    print(MLE.log_likelihood(1, 1, A))
+    print(MLE.log_likelihood(10, 1, A))
+    exit()
 
     # Question 2 - Empirically showing sample mean is consistent
     ms = np.arange(0, 1000, 10) + 10
@@ -31,24 +39,41 @@ def test_univariate_gaussian():
     pdf = MLE.pdf(X)
     go.Figure([go.Scatter(x=X[sort], y=pdf[sort], mode='markers+lines', name=r'$\widehat\mu$')],
               layout=go.Layout(title=r"$\text{Estimated Probabilty Of Given Values}$",
-                               xaxis_title="$m\\text{ - Drawn Values}$",
-                               yaxis_title="r$m\\text{ - Probability}$",
+                               xaxis_title="$\\text{ - Drawn Values}$",
+                               yaxis_title="r$\\text{ - Probability}$",
                                height=500)).show()
 
 
 def test_multivariate_gaussian():
+
     # Question 4 - Draw samples and print fitted model
-    raise NotImplementedError()
+    miu = np.array([0, 0, 4, 0]).T
+    cov = np.array([[1,   0.2, 0, 0.5],
+                    [0.2, 2,   0,   0],
+                    [0,   0,   1,   0],
+                    [0.5, 0,   0,   1],])
+    MLE = MultivariateGaussian()
+    X = np.random.multivariate_normal(miu, cov, 1000)
+    MLE.fit(X)
+    print(MLE.mu_, "\n", MLE.cov_)
 
     # Question 5 - Likelihood evaluation
-    raise NotImplementedError()
+    f = np.linspace(-10 ,10, 200)
+    logL = np.fromfunction(lambda i, j: MLE.log_likelihood(np.array([f[i],0,f[j],0]).T, cov, X), (200,200), dtype=int)
+    # Heatmap
+    plt.imshow(logL, cmap='hot', interpolation='none', extent=[-10 ,10,-10 ,10])
+    plt.title(r"Likelihood map of $\mu_1$ and $\mu_3$"+"\n"+r"(where the real $\mu$ is: [0,0,4,0]$)")
+    plt.xlabel(r"$\mu_3$")
+    plt.ylabel(r"$\mu_1$")
+    plt.show()
 
     # Question 6 - Maximum likelihood
-    raise NotImplementedError()
+    idx_y, idx_x = np.unravel_index(logL.argmax(), logL.shape)
+    print(f[idx_x], f[idx_y])
 
 
 if __name__ == '__main__':
     np.random.seed(0)
     test_univariate_gaussian()
-    test_multivariate_gaussian()
+    # test_multivariate_gaussian()
 
