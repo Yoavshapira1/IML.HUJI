@@ -33,7 +33,7 @@ def split_train_test(X: pd.DataFrame, y: pd.Series, train_proportion: float = .2
         Responses of test samples
 
     """
-    n_samples, = X.shape
+    n_samples = X.shape[0]
     train_size = np.ceil(n_samples * train_proportion)
 
     X = X.sample(frac=1)
