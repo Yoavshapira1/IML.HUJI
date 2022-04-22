@@ -95,14 +95,15 @@ def feature_evaluation(X: pd.DataFrame, y: pd.Series, output_path: str = ".") ->
     for feature in X:
         feat = np.array(X[feature].astype('float'))
         corr = pearson_corr(feat, y)
-        plt.title('Feature: %s\nPearson corr = %.2f' % (feature, corr))
-        plt.xlabel('Price, in millions')
-        plt.ylabel(feature)
-        plt.scatter(y, feat)
-        plt.savefig(output_path + r'\%s.png' % feature)
+        plt.title('Feature: %s\nPearson corr = %.3f' % (feature, corr))
+        plt.ylabel('Price, in millions')
+        plt.xlabel(feature)
+        plt.scatter(feat, y)
+        plt.savefig(output_path + r'\%s.jpg' % feature)
         fig.clear()
 
 if __name__ == '__main__':
+
     np.random.seed(0)
     # Question 1 - Load and preprocessing of housing prices dataset
     data_path = r'..\datasets\house_prices.csv'

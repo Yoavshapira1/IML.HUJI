@@ -1,6 +1,7 @@
 from typing import NoReturn
 from ...base import BaseEstimator
 import numpy as np
+from ...metrics.loss_functions import misclassification_error as MCL
 from numpy.linalg import det, inv
 
 
@@ -46,7 +47,32 @@ class LDA(BaseEstimator):
         y : ndarray of shape (n_samples, )
             Responses of input data to fit to
         """
-        raise NotImplementedError()
+
+        m, d = X.shape
+
+        # defining classes and pi
+        self.classes_, indices, counters = np.unique(y, return_counts=True, return_inverse=True)
+        self.pi_ = counters / m
+
+        # estimates the mean vectors for every class
+        self.mu_ = np.empty(shape=(0, d))
+        for label, counter in zip(self.classes_, counters):
+            I = (y == label)
+            _s = X * I
+            s = np.sum(X * I, axis=0)
+            self.mu_ = np.r_[self.mu_, s.reshape(1,d) / counter]
+
+        # estimates the covariance matrix
+        self.cov_ = np.zeros(shape=(d, d))
+        for x, mu in zip (X, self.mu_[indices]):
+            z_vec = (x - mu).reshape(d, 1)
+            self.cov_ += (z_vec * z_vec.T) / m
+
+        # alternative better way to check:
+        # cov = (X - self.mu_[indices]) * (X - self.mu_[indices]).T
+        # self.cov_ = (cov @ cov.T) / m
+
+        self._cov_inv = inv(self.cov_)
 
     def _predict(self, X: np.ndarray) -> np.ndarray:
         """
@@ -62,7 +88,9 @@ class LDA(BaseEstimator):
         responses : ndarray of shape (n_samples, )
             Predicted responses of given samples
         """
-        raise NotImplementedError()
+        likelihood = self.likelihood(X)
+        f = np.argmax(likelihood, axis=1)
+        return self.classes_[f]
 
     def likelihood(self, X: np.ndarray) -> np.ndarray:
         """
@@ -82,7 +110,14 @@ class LDA(BaseEstimator):
         if not self.fitted_:
             raise ValueError("Estimator must first be fitted before calling `likelihood` function")
 
-        raise NotImplementedError()
+        # Element a in the log-likelihood expression from recitation
+        a = self._cov_inv @ self.mu_.T
+
+        # Element b in the log-likelihood expression from recitation
+        b = np.log(self.pi_) -0.5 * np.diag(self.mu_ @ self._cov_inv @ self.mu_.T)
+
+        return (X @ a) + b
+
 
     def _loss(self, X: np.ndarray, y: np.ndarray) -> float:
         """
@@ -101,4 +136,7 @@ class LDA(BaseEstimator):
         loss : float
             Performance under missclassification loss function
         """
-        raise NotImplementedError()
+        return MCL(self.predict(X), y)
+
+    def get_mean_and_cov(self):
+        return self.mu_, self.cov_

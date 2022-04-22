@@ -55,7 +55,7 @@ def Q3(data):
     for color, country in data.groupby('Country'):
         tmp = country.groupby('Month')['Temp'].agg([np.mean, np.std])
         plt.errorbar(tmp.index.tolist(), tmp['mean'], tmp['std'], label=color, alpha=0.8)
-    plt.legend(title="Year", loc='lower center')
+    plt.legend(title="Country", loc='lower center')
     plt.show()
 
 def Q4(data):
@@ -76,6 +76,7 @@ def Q4(data):
     plt.title("Loss as a function of the degree")
     plt.xlabel("Polynomial Estimator degree")
     plt.ylabel("MSE")
+    plt.yticks([])
     plt.bar([k for k in range(1,K)], loss_per_k)
     plt.show()
 
@@ -100,6 +101,7 @@ def Q5(data):
     plt.title("Loss over each Country")
     plt.xlabel("Country")
     plt.ylabel("MSE")
+    plt.yticks([])
     plt.bar(res.keys(), [res[v] for v in res.keys()])
     plt.show()
 

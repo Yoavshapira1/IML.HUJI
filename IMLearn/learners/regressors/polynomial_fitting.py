@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import NoReturn
 from ...base import BaseEstimator
+from .linear_regression import LinearRegression
 import numpy as np
 from numpy.linalg import inv
 from ...metrics import mean_square_error as MSE
@@ -21,7 +22,7 @@ class PolynomialFitting(BaseEstimator):
         """
         super().__init__()
         self.deg = k
-        self.coefs_ = None
+        self.Lin = LinearRegression(include_intercept=False)
 
     def _fit(self, X: np.ndarray, y: np.ndarray) -> NoReturn:
         """
@@ -36,7 +37,7 @@ class PolynomialFitting(BaseEstimator):
             Responses of input data to fit to
         """
         X_trans = self.__transform(X)
-        self.coefs_ = (inv(X_trans.T @ X_trans) @ X_trans.T) @ y
+        self.Lin.fit(X_trans, y)
         self.fitted_ = True
 
     def _predict(self, X: np.ndarray) -> np.ndarray:
@@ -53,7 +54,7 @@ class PolynomialFitting(BaseEstimator):
         responses : ndarray of shape (n_samples, )
             Predicted responses of given samples
         """
-        return self.__transform(X) @ self.coefs_
+        return self.Lin.predict(self.__transform(X))
 
     def _loss(self, X: np.ndarray, y: np.ndarray) -> float:
         """
