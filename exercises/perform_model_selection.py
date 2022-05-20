@@ -2,16 +2,22 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 from sklearn import datasets
-from IMLearn.metrics import mean_square_error
+from IMLearn.metrics import mean_square_error as MSE
 from IMLearn.utils import split_train_test
 from IMLearn.model_selection import cross_validate
 from IMLearn.learners.regressors import PolynomialFitting, LinearRegression, RidgeRegression
 from sklearn.linear_model import Lasso
-
+from matplotlib import pyplot as plt
 from utils import *
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+def f(x):
+    return (x+3)*(x+2)*(x+1)*(x-1)*(x-2)
+
+def split_train_test_numpy(X: np.array, y: np.array, train_proportion: float = .25):
+    X_train, y_train, X_test, y_test = split_train_test(pd.DataFrame(X), pd.Series(y), train_proportion)
+    return np.array(X_train), np.array(y_train), np.array(X_test), np.array(y_test)
 
 def select_polynomial_degree(n_samples: int = 100, noise: float = 5):
     """
@@ -27,13 +33,47 @@ def select_polynomial_degree(n_samples: int = 100, noise: float = 5):
     """
     # Question 1 - Generate dataset for model f(x)=(x+3)(x+2)(x+1)(x-1)(x-2) + eps for eps Gaussian noise
     # and split into training- and testing portions
-    raise NotImplementedError()
+    sd = np.sqrt(noise)
+    eps = np.random.normal(0, sd, n_samples)
+    X = np.random.standard_normal(n_samples)
+    y = f(X) + eps
+    X_train, y_train, X_test, y_test = split_train_test_numpy(X, y, 0.33)
+    X_train, X_test = X_train.reshape(X_train.shape[0],), X_test.reshape(X_test.shape[0],)
+    plt.scatter(X_train, f(X_train), c='r', label='Train Set', alpha=0.8)
+    plt.scatter(X_test, f(X_test), c='b', label='Test Set', alpha=0.8)
+    plt.legend()
+    plt.show()
 
     # Question 2 - Perform CV for polynomial fitting with degrees 0,1,...,10
-    raise NotImplementedError()
+    plt.clf()
+    tr_score = []
+    valid_score = []
+    for deg in range(11):
+        train_score, validation_score = cross_validate(PolynomialFitting(deg), X_train, y_train, MSE)
+        tr_score.append(train_score)
+        valid_score.append(validation_score)
+    barWidth = 0.25
+    tr_bar = [x for x in range(11)]
+    val_bar = [x + barWidth for x in range(11)]
+    plt.bar(tr_bar, tr_score, color='r', width=barWidth,
+            edgecolor='grey', label='Training score')
+    plt.bar(val_bar, valid_score, color='g', width=barWidth,
+            edgecolor='grey', label='Validation score')
+    plt.scatter([], [], label="Minimal validation MSE\nfound in degree %d" % np.argmin(valid_score))
+    best_fit = int(np.argmin(valid_score))
+    plt.xlabel('Polynom Degree')
+    plt.ylabel('MSE (log-scaled)')
+    plt.xticks([r + barWidth for r in range(len(tr_bar))], tr_bar)
+    plt.legend()
+    plt.yscale('log')
+    plt.show()
+
 
     # Question 3 - Using best value of k, fit a k-degree polynomial model and report test error
-    raise NotImplementedError()
+    poly = PolynomialFitting(best_fit)
+    poly.fit(X_train, y_train)
+    loss = poly.loss(poly.predict(X_test), y_test)
+    print("test lss for k degree polynom: %f\nvalidation error: %f" % (loss, np.min(valid_score)))
 
 
 def select_regularization_parameter(n_samples: int = 50, n_evaluations: int = 500):
@@ -61,4 +101,4 @@ def select_regularization_parameter(n_samples: int = 50, n_evaluations: int = 50
 
 if __name__ == '__main__':
     np.random.seed(0)
-    raise NotImplementedError()
+    select_polynomial_degree()
