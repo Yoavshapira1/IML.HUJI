@@ -1,0 +1,619 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage{culmus}
+
+% Convert the Lyx colors into more pleasent colors:
+\usepackage{xcolor}
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 0cm
+\headsep 0cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Title
+)
+\numeric on
+67577
+\numeric off
+( 
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $IML$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+| תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\end_layout
+
+\begin_layout Author
+שם: יואב שפירא| ת"ז:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+312492838
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+חלק תאורטי
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Enumerate
+להשלים
+\end_layout
+
+\begin_layout Enumerate
+נתון הגבול: 
+\begin_inset Formula $\left[\mathbb{E}_{S\sim D^{m}}L_{D}\left(A(S)\right)\right]_{m\longrightarrow\infty}=0$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+יהיו 
+\begin_inset Formula $\varepsilon,\delta$
+\end_inset
+
+.
+ מהגדרת הגבול, עבור 
+\begin_inset Formula $\varepsilon\delta>0$
+\end_inset
+
+, קיים סף כלשהו 
+\begin_inset Formula $n$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $N>n$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula 
+\[
+\mathbb{E}_{S\sim D^{N}}\left(L_{D}\left(A(S)\right)\right)<\varepsilon\delta
+\]
+
+\end_inset
+
+כעת, נבחין כי 
+\begin_inset Formula $L_{D}$
+\end_inset
+
+ הוא מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אי שלילי ולכן ניתן להשתמש בא
+\begin_inset Quotes erd
+\end_inset
+
+ש.
+ מא
+\begin_inset Quotes erd
+\end_inset
+
+ב מרקוב מתקיים:
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim D^{N}}\left(L_{D}\left(A(S)\right)>\varepsilon\right)\leq\frac{\mathbb{E}_{S\sim D^{N}}\left(L_{D}\left(A(S)\right)\right)}{\varepsilon}\leq\frac{\varepsilon\delta}{\varepsilon}=\delta
+\]
+
+\end_inset
+
+ניקח משלים של ההסתברות ונקבל:
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim D^{N}}\left(L_{D}\left(A(S)\right)\leq\varepsilon\right)=1-\mathbb{P}_{S\sim D^{N}}\left(L_{D}\left(A(S)\right)>\varepsilon\right)\geq1-\delta
+\]
+
+\end_inset
+
+ולכן, לכל 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ ו
+\begin_inset Formula $\delta$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $m=m(\varepsilon,\delta)=\varepsilon\delta$
+\end_inset
+
+ ונקבל שלכל 
+\begin_inset Formula $N\geq m$
+\end_inset
+
+ מתקיים הדרוש.
+\end_layout
+
+\begin_layout Subsection*
+שאלה
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Standard
+נסמן את החלוקה ה'אמיתית' )לפי ההיפותזה שלנו( ב
+\begin_inset Formula $f_{R}$
+\end_inset
+
+, כלומר:
+\begin_inset Formula 
+\[
+f_{R}(x)=\begin{cases}
+1 & ||x||\leq R\\
+0 & ||x||>R
+\end{cases}
+\]
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $S\sim D^{m}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $m$
+\end_inset
+
+ כלשהו.
+ נגדיר את 
+\begin_inset Formula $A$
+\end_inset
+
+ האלגוריתם: נבחר את 
+\begin_inset Formula $h_{r}$
+\end_inset
+
+ כך:
+\begin_inset Formula 
+\[
+r=argMax_{||x_{i}||}\left\{ x_{i}\in S\land y_{i}=1\right\} 
+\]
+
+\end_inset
+
+כלומר נבחר את 
+\begin_inset Formula $r$
+\end_inset
+
+ להיות הנורמה המקסימלית של סמפל מ
+\begin_inset Formula $S$
+\end_inset
+
+ שהלייבל שלו הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\begin_inset Newline newline
+\end_inset
+
+נבחין כי על ידי בחירה זו, מתקיים ש
+\begin_inset Formula $r\leq R$
+\end_inset
+
+ והאלגוריתם לעולה לא יטעה בלייבלים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+ כי:
+\begin_inset Formula 
+\[
+h_{r}(x)=1\iff||x||\leq r\iff||x||\leq R\iff f_{R}(x)
+\]
+
+\end_inset
+
+כלומר האלגוריתם יטעה עבור סמפלים שהלייבלים שלהם הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+, ובכל זאת הוא קטלג אותם כ
+\numeric on
+0
+\numeric off
+, כלומר הסיכוי לטעות בסמפל 
+\begin_inset Formula $x$
+\end_inset
+
+ הוא:
+\begin_inset Formula 
+\[
+L_{D}\left(h_{r}(x)\right)=\mathbb{P}\left(x\in C_{R}\backslash C_{r}\right)=C_{R}-C_{r}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $C_{r}$
+\end_inset
+
+ ו
+\begin_inset Formula $C_{R}$
+\end_inset
+
+ הם המעגלים עם הרדיוסים המתאימים.
+ נסמן את 
+\begin_inset Formula $C_{R}-C_{r}=\varepsilon$
+\end_inset
+
+.
+ נבחן את 
+\begin_inset Formula $L_{D}$
+\end_inset
+
+ על כל המרחב דגימות:
+\begin_inset Formula 
+\[
+L_{D}\left(h_{r}\left(S\right)\right)=\prod_{i=1}^{m}\mathbb{P}\left(x_{i}\in C_{R}\backslash C_{r}\right)=\left(C_{R}-C_{r}\right)^{m}=\varepsilon^{m}
+\]
+
+\end_inset
+
+מכאן נובע שהסיכוי שלא יהיו טעויות הוא: 
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim D^{m}}\left[L_{D}\left(h_{r}\left(S\right)\right)=0\right]=1-\varepsilon^{m}\leq e^{-m\varepsilon}
+\]
+
+\end_inset
+
+ועבור כל 
+\begin_inset Formula $m\geq\frac{log\left(\frac{1}{\delta}\right)}{\varepsilon}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim D^{m}}\left[L_{D}\left(h_{r}\left(S\right)\right)=0\right]\leq e^{-\frac{log\left(\frac{1}{\delta}\right)}{\varepsilon}\varepsilon}\leq\delta
+\]
+
+\end_inset
+
+ ובפרט מתקיים כי לכל 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim D^{m}}\left[L_{D}\left(h_{r}\left(S\right)\right)\leq\varepsilon\right]\leq\delta
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $A$
+\end_inset
+
+ מקיים את הדרישה כדי להיות 
+\begin_inset Formula $PAC\ learnable$
+\end_inset
+
+ שכן מתקיים: 
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim D^{m}}\left[L_{D}\left(h_{r}\left(S\right)\right)\leq\varepsilon\right]\geq1-\delta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

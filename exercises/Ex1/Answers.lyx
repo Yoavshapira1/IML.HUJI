@@ -1,0 +1,2032 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage{culmus}
+
+% Convert the Lyx colors into more pleasent colors:
+\usepackage{xcolor}
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 0cm
+\headsep 0cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Title
+)
+\numeric on
+67577
+\numeric off
+( 
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $IML$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+| תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Author
+שם: יואב שפירא| ת"ז:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+312492838
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+חלק
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תאורטי
+\end_layout
+
+\begin_layout Enumerate
+אזכיר כי 
+\begin_inset Formula $||x||^{2}=x^{T}x$
+\end_inset
+
+.
+ ומכאן:
+\begin_inset Formula 
+\begin{align*}
+||Ax||^{2} & =\left(Ax\right)^{T}\left(Ax\right)\\
+_{1} & =x^{T}A^{T}Ax\\
+_{2} & =x^{T}Ix\\
+_{3} & =x^{T}x=||x||^{2}
+\end{align*}
+
+\end_inset
+
+כש:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ תכונת שחלוף, 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תכונת של מטריצה אורתוגונלית, ו
+\numeric on
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מהגדרת 
+\begin_inset Formula $||\cdot||$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+מכיוון שנורמה היא אי שלילית נובע כי 
+\begin_inset Formula $||Ax||=||x||$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\in\mathbb{R}_{2\times3}$
+\end_inset
+
+, ולכן יש לה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ערכים סינגולריים 
+\begin_inset Formula $\sigma_{1,2}$
+\end_inset
+
+, וקודם נמצא אותם: הם למעשה השורשים של הע
+\begin_inset Quotes erd
+\end_inset
+
+ע של המטריצה הסימטרית 
+\begin_inset Formula $AA^{T}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+AA^{T}=\left[\begin{matrix}1 & 1 & 0\\
+1 & -1 & 2
+\end{matrix}\right]\left[\begin{matrix}1 & 1\\
+1 & -1\\
+2 & 0
+\end{matrix}\right]=\left[\begin{matrix}2 & 0\\
+0 & 6
+\end{matrix}\right]
+\]
+
+\end_inset
+
+יצא קל, המטריצה אלכסונית וזה אומר שהע
+\begin_inset Quotes erd
+\end_inset
+
+ע הם הכניסות על האלכסון.
+ כלומר קיבלנו ש 
+\begin_inset Formula $\sigma_{1}=\sqrt{2}$
+\end_inset
+
+ו
+\begin_inset Formula $\sigma_{2}=\sqrt{6}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נמצא מטריצה 
+\begin_inset Formula $U$
+\end_inset
+
+ שמהווה בסיס אורתונורמלי ל
+\begin_inset Formula $AA^{T}$
+\end_inset
+
+.
+ גם כאן במקרה הוא קל וניתן לבחור פשוט 
+\begin_inset Formula $U=\left[\begin{matrix}1 & 0\\
+0 & 1
+\end{matrix}\right]$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נמצא את 
+\begin_inset Formula $V$
+\end_inset
+
+: תחילה נוכיח את הנוסחה הבאה: לכל 
+\begin_inset Formula $i\leq n$
+\end_inset
+
+ )במקרה הזה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $n=2$
+\end_inset
+
+( מתקיים:
+\begin_inset Formula 
+\[
+\overline{v}_{i}=\frac{1}{\sigma_{i}}A^{T}\overline{u}_{i}
+\]
+
+\end_inset
+
+
+\series bold
+הוכחה: 
+\series default
+תהא 
+\begin_inset Formula $A\in\mathbb{R}_{n\times m}$
+\end_inset
+
+ , נסתכל על הפירוק 
+\begin_inset Formula $SVD$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A=U\Sigma V^{T}\Longrightarrow A^{T}=V\Sigma^{T}U^{T}
+\]
+
+\end_inset
+
+מאורתוגונליות של 
+\begin_inset Formula $U$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula 
+\[
+A^{T}U=V\Sigma^{T}
+\]
+
+\end_inset
+
+נסתכל על המטריצה 
+\begin_inset Formula $V\Sigma^{T}\in\mathbb{R}_{m\times n}$
+\end_inset
+
+.
+ במטריצה 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ יש את הערכים הסינגולריים של 
+\begin_inset Formula $A$
+\end_inset
+
+ על האלכסון הראשי ובכל השאר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, ולכן לכל 
+\begin_inset Formula $i\leq n$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\overline{v}_{i}\Sigma_{i}^{T}=\sigma_{i}\overline{v}_{i}
+\]
+
+\end_inset
+
+כלומר המטריצה נראית כך: 
+\begin_inset Formula 
+\[
+V\Sigma^{T}=\left[\begin{matrix}\brokenvert & \cdots & \brokenvert\\
+\sigma_{1}\overline{v}_{1} & \cdots & \sigma_{n}\overline{v}_{n}\\
+\brokenvert & \cdots & \brokenvert
+\end{matrix}\right]
+\]
+
+\end_inset
+
+ואם נסתכל על כל וקטור בנפרד, נקבל מ)*( ש 
+\begin_inset Formula $\overline{v}_{i}=\frac{1}{\sigma_{i}}A^{T}\overline{u}_{i}$
+\end_inset
+
+ כמו שרצינו.
+\begin_inset Newline newline
+\end_inset
+
+עכשיו נמצא את 
+\begin_inset Formula $V$
+\end_inset
+
+ בשיטה הזאת.
+ עבור 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\overline{v}_{1}=\frac{1}{\sigma_{1}}A^{T}\overline{u}_{1}=\frac{\sqrt{2}}{2}\left[\begin{matrix}1 & 1\\
+1 & -1\\
+1 & 2
+\end{matrix}\right]\left(\begin{matrix}1\\
+0
+\end{matrix}\right)=\frac{\sqrt{2}}{2}\left(\begin{matrix}1\\
+1\\
+0
+\end{matrix}\right)
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\overline{v}_{2}=\frac{1}{\sigma_{2}}A^{T}\overline{u}_{2}=\frac{\sqrt{6}}{6}\left[\begin{matrix}1 & 1\\
+1 & -1\\
+1 & 2
+\end{matrix}\right]\left(\begin{matrix}0\\
+1
+\end{matrix}\right)=\frac{\sqrt{6}}{6}\left(\begin{matrix}1\\
+-1\\
+2
+\end{matrix}\right)
+\]
+
+\end_inset
+
+כעת נמצא את 
+\begin_inset Formula $\overline{v}_{3}$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י מציאת וקטור המאונך לשני הקודמים וננרמל אותו.
+ נחפש 
+\begin_inset Formula $\overline{v}_{3}=\left(\begin{matrix}x\\
+y\\
+z
+\end{matrix}\right)$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+\left\langle \left(\begin{matrix}x\\
+y\\
+z
+\end{matrix}\right),\left(\begin{matrix}1\\
+1\\
+0
+\end{matrix}\right)\right\rangle =0\Longrightarrow x=-y
+\]
+
+\end_inset
+
+וגם
+\begin_inset Formula 
+\[
+\left\langle \left(\begin{matrix}x\\
+y\\
+z
+\end{matrix}\right),\left(\begin{matrix}1\\
+-1\\
+2
+\end{matrix}\right)\right\rangle =0\Longrightarrow x=y-2z
+\]
+
+\end_inset
+
+ונקבל כי 
+\begin_inset Formula $y=z$
+\end_inset
+
+, כלומר הוקטור הוא מהצורה 
+\begin_inset Formula $\left(\begin{matrix}1\\
+-1\\
+-1
+\end{matrix}\right)$
+\end_inset
+
+ ולכן נבחר את וקטור היחידה 
+\begin_inset Formula $\hat{v}_{3}=\frac{\sqrt{3}}{3}\left(\begin{matrix}1\\
+-1\\
+-1
+\end{matrix}\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ובסה
+\begin_inset Quotes erd
+\end_inset
+
+כ קיבלנו את פירוק ה
+\begin_inset Formula $SVD$
+\end_inset
+
+ הבא: 
+\begin_inset Formula 
+\[
+A=\left[\begin{matrix}1 & 0\\
+0 & 1
+\end{matrix}\right]\left[\begin{matrix}\sqrt{2} & 0 & 0\\
+0 & \sqrt{6} & 0
+\end{matrix}\right]\left[\begin{matrix}\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0\\
+\frac{\sqrt{6}}{6} & -\frac{\sqrt{6}}{6} & \frac{\sqrt{6}}{3}\\
+\frac{\sqrt{3}}{3} & -\frac{\sqrt{3}}{3} & -\frac{\sqrt{3}}{3}
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+משפט שימושי מליניארית: 
+\series default
+תהא 
+\begin_inset Formula $C\in\mathbb{R}^{n\times n}$
+\end_inset
+
+ מטריצה לכסינה ע
+\begin_inset Quotes erd
+\end_inset
+
+י מטריצה אורתוגונלית 
+\begin_inset Formula $P$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $C=PDP^{T}$
+\end_inset
+
+.
+ אז ניתן לרשום את 
+\begin_inset Formula $C$
+\end_inset
+
+ כסכום ההטלות שלה על 
+\begin_inset Formula $P$
+\end_inset
+
+, כשכל הטלה מתוחה ע
+\begin_inset Quotes erd
+\end_inset
+
+י הע
+\begin_inset Quotes erd
+\end_inset
+
+ע המתאים.
+ כלומר:
+\begin_inset Formula 
+\[
+C=\sum_{i=1}^{n}\lambda_{i}p_{i}p_{i}^{T}
+\]
+
+\end_inset
+
+נשתמש בזה בהמשך.
+\begin_inset Newline newline
+\end_inset
+
+כעת נתון לנו כי 
+\begin_inset Formula $C_{0}=A^{T}A$
+\end_inset
+
+, ואנחנו יודעים אם כך שהע
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $C_{0}$
+\end_inset
+
+ הם הערכים הסינגולריים של 
+\begin_inset Formula $A$
+\end_inset
+
+ בריבוע כלומר 
+\begin_inset Formula $\lambda_{i}=\sigma_{i}^{2}$
+\end_inset
+
+, וכי אם 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $SVD$
+\end_inset
+
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+ , אנחנו יודעים כי 
+\begin_inset Formula $C_{0}=U\Sigma\Sigma^{T}V^{T}$
+\end_inset
+
+.
+ נסמן 
+\begin_inset Formula 
+\[
+\Sigma\Sigma^{T}=diag\left(\lambda_{1},...,\lambda_{n}\right)
+\]
+
+\end_inset
+
+מכיוון שזו מטריצה ריבועית קל לנו להעלות בחזקה:
+\begin_inset Formula 
+\[
+\left(\Sigma\Sigma^{T}\right)^{k}=diag\left(\lambda_{1}^{k},...,\lambda_{n}^{k}\right)
+\]
+
+\end_inset
+
+וגם נעלה כך את 
+\begin_inset Formula $C_{0}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+C_{0}^{k}=Vdiag\left(\lambda_{1}^{k},...,\lambda_{n}^{k}\right)V^{T}
+\]
+
+\end_inset
+
+נבחין כי 
+\begin_inset Formula $C_{0}^{k}$
+\end_inset
+
+ היא לכסינה ומתאימה לשימוש במשפט מלמעלה, נרשום אותה כך:
+\begin_inset Formula 
+\[
+C_{0}^{k}=\sum_{i=1}^{n}v_{i}\lambda_{i}^{k}v_{i}^{T}=\sum_{i=1}^{n}\lambda_{i}^{k}v_{i}v_{i}^{T}
+\]
+
+\end_inset
+
+עכשיו נחשב את 
+\begin_inset Formula $b_{k+1}$
+\end_inset
+
+: זהו למעשה וקטור מנורמל, אז אתייחס רק אל חישוב הכיוון )מונה( שלו ומשם נסיק
+ על המכנה שלו.
+ המונה שלו מתקיים:
+\begin_inset Formula 
+\[
+C_{0}b_{k}=C_{0}C_{0}b_{k-1}=......=C_{0}^{k}b_{0}
+\]
+
+\end_inset
+
+נציב את 
+\begin_inset Formula $C_{0}^{k}$
+\end_inset
+
+ שחישבנו, ואת 
+\begin_inset Formula $b_{0}$
+\end_inset
+
+ הנתון לנו:
+\begin_inset Formula 
+\[
+C_{0}b_{k}=\sum_{i=1}^{n}\lambda_{i}^{k}v_{i}v_{i}^{T}\cdot\sum_{i=1}^{n}a_{i}v_{i}=\sum_{i=1}^{n}a_{i}\lambda_{i}^{k}v_{i}v_{i}^{T}v_{i}=\sum_{i=1}^{n}a_{i}\lambda_{i}^{k}v_{i}
+\]
+
+\end_inset
+
+כשמהעבר האחרון נובע מאורתוגונליות של 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ כעת, מהנתון ש 
+\begin_inset Formula $\lambda_{1}>>\lambda_{j}$
+\end_inset
+
+ ומהנתון ש 
+\begin_inset Formula $a_{1}\neq0$
+\end_inset
+
+ נקבל ש 
+\begin_inset Formula 
+\[
+C_{0}^{k}b_{0}\overset{k\rightarrow\infty}{\longrightarrow}a_{1}\lambda_{1}^{k}v_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $b_{k+1}$
+\end_inset
+
+ הוא וקטור מנורמל, כלומר מחולק במגניטודה שלו.
+ נחשב אותה:
+\begin_inset Formula 
+\[
+||C_{0}^{k}b_{0}||\overset{k\rightarrow\infty}{\longrightarrow}||a_{1}\lambda_{1}^{k}v_{1}||=\left|a_{1}\lambda_{1}^{k}\right|\cdot||v_{1}||=\left|a_{1}\lambda_{1}^{k}\right|
+\]
+
+\end_inset
+
+ובסה
+\begin_inset Quotes erd
+\end_inset
+
+כ נקבל:
+\begin_inset Formula 
+\[
+b_{k+1}=\frac{C_{0}b_{k}}{||C_{0}b_{k}||}=\frac{C_{0}^{k}b_{0}}{||C_{0}^{k}b_{0}||}\overset{k\rightarrow\infty}{\longrightarrow}\frac{a_{1}\lambda_{1}^{k}v_{1}}{||a_{1}\lambda_{1}^{k}v_{1}||}=\frac{a_{1}\lambda_{1}^{k}v_{1}}{\left|a_{1}\lambda_{1}^{k}\right|\cdot||v_{1}||}=\pm v_{1}
+\]
+
+\end_inset
+
+כדרוש.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U$
+\end_inset
+
+ היא מטריצה אורתוגונלית ו
+\begin_inset Formula $diag(\sigma)$
+\end_inset
+
+ היא מטריצה אלכסונית, ולכן 
+\begin_inset Formula $Udiag(\sigma)U^{T}$
+\end_inset
+
+ נותנת לנו מטריצה לכסינה )זה ליטרלי ההגדרה(.
+ מהמשפט השימושי בסעיף הקודם, נובע שניתן לרשום גם:
+\begin_inset Formula 
+\[
+Udiag(\sigma)U^{T}=\sum_{i=1}^{n}\sigma_{i}u_{i}u_{i}^{T}
+\]
+
+\end_inset
+
+כלומר נקבל כי 
+\begin_inset Formula 
+\[
+f\left(\sigma\right)=\sum_{i=1}^{n}\sigma_{i}u_{i}u_{i}^{T}x
+\]
+
+\end_inset
+
+ככה קל לגזור את 
+\begin_inset Formula $f$
+\end_inset
+
+ לפי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ :
+\begin_inset Formula 
+\[
+\frac{\partial f(\sigma)}{\partial\sigma_{i}}=u_{i}u_{i}^{T}\overline{x}=u_{i}\left\langle u_{i},x\right\rangle 
+\]
+
+\end_inset
+
+נשים לב שהנגזרת היא וקטור - זהו בדיוק הוקטור ה
+\begin_inset Formula $i$
+\end_inset
+
+ הוא העמודה ה
+\begin_inset Formula $i$
+\end_inset
+
+ ביעקביאן.
+ נקבל שהיעקביאן נראה כך:
+\begin_inset Formula 
+\[
+J(f_{\sigma})=\left[\begin{matrix}\brokenvert &  & \brokenvert\\
+u_{1}\left\langle u_{1},x\right\rangle  & \cdots & u_{n}\left\langle u_{n},x\right\rangle \\
+\brokenvert &  & \brokenvert
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+לפי הבנתי 
+\begin_inset Formula $f$
+\end_inset
+
+ היא אותה הפונקצייה מהשאלה הקודמת.
+ הגרדיאנט הוא מהגדרה:
+\begin_inset Formula 
+\[
+\nabla h(\sigma)=\left[\begin{matrix}\frac{\partial h(\sigma)}{\partial\sigma_{1}}\\
+\vdots\\
+\frac{\partial h(\sigma)}{\partial\sigma_{n}}
+\end{matrix}\right]
+\]
+
+\end_inset
+
+נגזור בכל כיוון 
+\begin_inset Formula $i$
+\end_inset
+
+ , לפי כלל השרשרת:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial h}{\partial\sigma_{i}} & =\frac{\partial}{\partial\sigma_{i}}\frac{1}{2}(f(\sigma)-y)^{2}=2\cdot\frac{1}{2}(f(\sigma)-y)\cdot\frac{\partial}{\partial\sigma_{i}}f(\sigma)-y\\
+ & =(f(\sigma)-y)\cdot u_{i}\left\langle u_{i},x\right\rangle -0
+\end{align*}
+
+\end_inset
+
+כשהמעבר האחרון הוא מהנגזרת שחישבנו בסעיף הקודם.
+ מכאן נקבל כי:
+\begin_inset Formula 
+\[
+\nabla h(\sigma)=\left[\begin{matrix}(f(\sigma)-y)\cdot u_{1}\left\langle u_{1},x\right\rangle \\
+\vdots\\
+(f(\sigma)-y)\cdot u_{n}\left\langle u_{n},x\right\rangle 
+\end{matrix}\right]=(f(\sigma)-y)\cdot\left[\begin{matrix}u_{1}\left\langle u_{1},x\right\rangle \\
+\vdots\\
+u_{n}\left\langle u_{n},x\right\rangle 
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נסמן 
+\begin_inset Formula $x=\left(\begin{matrix}x_{1}\\
+\vdots\\
+x_{d}
+\end{matrix}\right)\in\mathbb{R}^{d}$
+\end_inset
+
+.
+ נמצא את כל הנגזרות 
+\begin_inset Formula $\frac{\partial S(x)_{j}}{\partial x_{i}}$
+\end_inset
+
+ ונרכיב את היעקוביאן:
+\begin_inset Formula 
+\[
+\frac{\partial S(x)_{j}}{\partial x_{i}}=\frac{\partial}{\partial x_{i}}\frac{e^{x_{j}}}{\sum_{k=1}^{d}e^{x_{k}}}
+\]
+
+\end_inset
+
+נחשב כל איבר במונה ובמכנה בנפרד:
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial x_{i}}e^{x_{j}}=\begin{cases}
+e^{x_{i}} & i=j\\
+0 & i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial x_{i}}\sum_{k=1}^{d}e^{x_{k}}=e^{x_{i}}
+\]
+
+\end_inset
+
+נטפל קודם במקרה שבו 
+\begin_inset Formula $i=j$
+\end_inset
+
+.
+ נרכיב את הנגזרת של כל השבר:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial x_{i}}\frac{e^{x_{j}}}{\sum_{k=1}^{d}e^{x_{k}}} & =\frac{e^{x_{i}}\left(\sum_{k=1}^{d}e^{x_{k}}\right)-e^{x_{j}}e^{x_{i}}}{\left(\sum_{k=1}^{d}e^{x_{k}}\right)^{2}}\\
+ & =\frac{e^{x_{i}}\bcancel{\left(\sum_{k=1}^{d}e^{x_{k}}\right)}}{\left(\sum_{k=1}^{d}e^{x_{k}}\right)^{\bcancel{2}}}-\frac{e^{x_{j}}e^{x_{i}}}{\left(\sum_{k=1}^{d}e^{x_{k}}\right)^{2}}\\
+ & =S(x)_{i}-S(x)_{i}S(x)_{j}=S(x)_{i}\left(1-S(x)_{j}\right)
+\end{align*}
+
+\end_inset
+
+במקרה בו 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial x_{i}}\frac{e^{x_{j}}}{\sum_{k=1}^{d}e^{x_{k}}}=\frac{-e^{x_{j}}e^{x_{i}}}{\left(\sum_{k=1}^{d}e^{x_{k}}\right)^{2}}=-S(x)_{i}S(x)_{j}
+\]
+
+\end_inset
+
+נרכיב את היעקביאן:
+\begin_inset Formula 
+\[
+\left[J_{S(x)}\right]_{i}^{j}=\begin{cases}
+S(x)_{i}\left(1-S(x)_{j}\right) & i=j\\
+-S(x)_{i}S(x)_{j} & i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+f\left(x,y\right)=x^{3}-5xy-y^{5}
+\]
+
+\end_inset
+
+נחשב את הנגזרות החלקיות הראשונות:
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=3x^{2}-5y
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=-5x-5y^{4}
+\]
+
+\end_inset
+
+נחשב את הנגזרות החלקיות השניות:
+\begin_inset Formula 
+\[
+\frac{\partial f^{2}}{\partial x^{2}}=6x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial f^{2}}{\partial xy}=-5
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial f^{2}}{\partial y^{2}}=-20y^{3}
+\]
+
+\end_inset
+
+נרכיב את ההסיאן:
+\begin_inset Formula 
+\[
+H\left[f(x,y)\right]=\left[\begin{matrix}6x & -5\\
+-5 & -20y^{3}
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+הרעיון הוא להראות שהאומד מתכנס מסביב לערך הממוצע ככל שכמות הסמפלים גדלה.
+ כלומר, 
+\begin_inset Formula $Var(\hat{\mu}_{n})\propto\frac{1}{n}$
+\end_inset
+
+.
+ השיטה היא לחסום את סטיית התקן עבור כל 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+יהי 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, ונבחר 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ איזשהי מידת דיוק רצויה.
+ מכיוון ש
+\begin_inset Formula $Var(x_{i})<\infty$
+\end_inset
+
+ וגם 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ ניתן להשתמש בא
+\begin_inset Quotes erd
+\end_inset
+
+ש צ'בישב:
+\begin_inset Formula 
+\[
+P\left(|\hat{\mu}_{n}-\mathbb{E}[\hat{\mu}_{n}]|\geq\varepsilon\right)\leq\frac{Var(\hat{\mu}_{n})}{\varepsilon^{2}}
+\]
+
+\end_inset
+
+|
+\begin_inset Formula $\hat{\mu}_{n}-\mathbb{E}[\hat{\mu}_{n}]$
+\end_inset
+
+| היא בדיוק סטיית התקן של 
+\begin_inset Formula $\hat{\mu}_{n}$
+\end_inset
+
+.
+ נמשיך בפיתוח הא
+\begin_inset Quotes erd
+\end_inset
+
+ש:
+\begin_inset Formula 
+\begin{align*}
+\frac{Var(\hat{\mu}_{n})}{\varepsilon^{2}} & =\frac{Var(\frac{1}{n}\sum_{i=1}^{n}x_{i})}{\varepsilon^{2}}\\
+_{1} & =\frac{Var(\sum_{i=1}^{n}x_{i})}{n^{2}\varepsilon^{2}}\\
+_{2} & =\frac{nVar(x_{i})}{n^{2}\varepsilon^{2}}=\frac{Var(x_{i})}{n\varepsilon^{2}}
+\end{align*}
+
+\end_inset
+
+כשהמעבר הראשון מהגדרת 
+\begin_inset Formula $\hat{\mu}_{n}$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ ו
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתכונות של שונות.
+\begin_inset Newline newline
+\end_inset
+
+מכיוון שממוצע הוא אומד לא מוטה אז 
+\begin_inset Formula $\mathbb{E}[\hat{\mu}_{n}]=\mathbb{E}[x_{i}]$
+\end_inset
+
+.
+ כלומר קיבלנו כי עבור כל 
+\begin_inset Formula $n,\varepsilon$
+\end_inset
+
+, הסיכוי שהאומד רחוק מהממוצע ביותר מ
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ הולך וקטן, כלומר האומד מתכנס מסביב לערך הממוצע שלו.
+\end_layout
+
+\begin_layout Enumerate
+סימנתי כאן את התצפיות 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ כוקטורים: 
+\begin_inset Formula $\overline{x}_{i}$
+\end_inset
+
+, לנוחות שלי.
+\begin_inset Newline newline
+\end_inset
+
+ה
+\begin_inset Formula $likelihood$
+\end_inset
+
+ הוא בעצם הביטוי המביע את הסיכוי לקבל את 
+\begin_inset Formula $\overline{x_{i}}$
+\end_inset
+
+ אם הוא היה מתפלג ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $N\left(\overline{\mu},\Sigma\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+P\left(\overline{x_{i}}\right)\ \ s.t\ \ \overline{x_{i}}\sim N\left(\overline{\mu},\Sigma\right)\ \ \left(\overline{x_{i}}\in\mathbb{R}^{d}\right)
+\]
+
+\end_inset
+
+מכיוון ש
+\begin_inset Formula $P(\overline{x})\propto p\overline{(x)}$
+\end_inset
+
+ והביטוי הזה נדרש ל
+\begin_inset Formula $argMax$
+\end_inset
+
+ אחר כך )
+\begin_inset Formula $p$
+\end_inset
+
+ היא פונקציית הצפיפות של ההתפלגות( אז 
+\begin_inset Formula $likelihood$
+\end_inset
+
+ מחושב ע
+\begin_inset Quotes erd
+\end_inset
+
+י פונקציית הצפיפות בעצמה.
+ במקרה שלנו, ה
+\begin_inset Formula $likelihood$
+\end_inset
+
+ לכל תצפית בנפרד נתונה ע
+\begin_inset Quotes erd
+\end_inset
+
+י:
+\begin_inset Formula 
+\[
+p\left(\overline{x_{i}}\right)=\frac{1}{\sqrt{(2\pi)^{d}|\Sigma|}}\cdot exp\left(-\frac{1}{2}\left(\overline{x}-\overline{\mu}\right)^{T}\Sigma^{-1}\left(\overline{x}-\overline{\mu}\right)\right)
+\]
+
+\end_inset
+
+מכיוון שכל 
+\begin_inset Formula $m$
+\end_inset
+
+ התצפיות נדגמו באופן בת
+\begin_inset Quotes erd
+\end_inset
+
+ל מאותה התפלגות אז ה
+\begin_inset Formula $likelihood$
+\end_inset
+
+ בסה
+\begin_inset Quotes erd
+\end_inset
+
+כ נתון ע
+\begin_inset Quotes erd
+\end_inset
+
+י:
+\begin_inset Formula 
+\[
+P\left(\overline{x}_{1},\overline{x}_{2}...\overline{x}_{m}|\overline{\mu},\Sigma\right)=\prod_{i=1}^{m}P\left(\overline{x}_{i}|\overline{\mu},\Sigma\right)
+\]
+
+\end_inset
+
+ניקח 
+\begin_inset Formula $log$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+log\left(P\left(\overline{x}_{1},\overline{x}_{2}...\overline{x}_{m}|\overline{\mu},\Sigma\right)\right)=\sum_{i=1}^{m}log\left(P\left(\overline{x}_{i}|\overline{\mu},\Sigma\right)\right)=logL
+\]
+
+\end_inset
+
+אני סימנתי את הביטוי ב
+\begin_inset Formula $logL$
+\end_inset
+
+.
+ נפתח את הביטוי:
+\begin_inset Formula 
+\begin{align*}
+logL & =\sum_{i=1}^{m}log\left(\frac{1}{\sqrt{(2\pi)^{d}|\Sigma|}}\cdot exp\left(-\frac{1}{2}\left(\overline{x_{i}}-\overline{\mu}\right)^{T}\Sigma^{-1}\left(\overline{x_{i}}-\overline{\mu}\right)\right)\right)\\
+_{1} & =\sum_{i=1}^{m}\left(-log\left(\sqrt{(2\pi)^{d}|\Sigma|}\right)-\frac{1}{2}\left(\overline{x_{i}}-\overline{\mu}\right)^{T}\Sigma^{-1}\left(\overline{x_{i}}-\overline{\mu}\right)\right)\\
+_{2} & =-\sum_{i=1}^{m}\frac{1}{2}\left(log\left((2\pi)^{d}\right)+log\left(|\Sigma|\right)+\left(\overline{x_{i}}-\overline{\mu}\right)^{T}\Sigma^{-1}\left(\overline{x_{i}}-\overline{\mu}\right)\right)\\
+_{3} & =-\frac{md\cdot log\left(2\pi\right)}{2}-\frac{-log\left(|\Sigma|\right)}{2}-\sum_{i=1}^{m}\frac{1}{2}\left(\overline{x_{i}}-\overline{\mu}\right)^{T}\Sigma^{-1}\left(\overline{x_{i}}-\overline{\mu}\right)
+\end{align*}
+
+\end_inset
+
+כשב
+\numeric on
+1
+\numeric off
+: יישום חוקי לוגריתם,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+: הוצאת שורש מהלוג ואז גורם משותף,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+: הוצאת איברים שלא תלויים בסיגמא.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+חלק
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מעשי
+\end_layout
+
+\begin_layout Enumerate
+קוד.
+\end_layout
+
+\begin_layout Enumerate
+בגרף הבא, לכל 
+\begin_inset Formula $10\leq m\leq1000$
+\end_inset
+
+ התאמתי מודל של אומד גאוסיאני חדש )ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $.fit(X[m:])$
+\end_inset
+
+(.
+ לכל 
+\begin_inset Formula $m$
+\end_inset
+
+ חישבתי את המרחק מהתוחלת האמיתית, והדפסתי את המרחק כפונקצייה של 
+\begin_inset Formula $m$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q3_1_2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+בשאלה זו התבקשנו
+\series bold
+ 
+\series default
+להציג את ה
+\begin_inset Formula $PDF$
+\end_inset
+
+ שחושבה ע
+\begin_inset Quotes erd
+\end_inset
+
+י האומד כפונקצייה של הערכים שהגרלנו.
+ זוהי למעשה פונקציית הצפיפות שהיינו מצפים למצוא.
+ מכיוון ש זו התפלגות נורמלית עם תוחלת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ושונות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היינו מצפים לראות פעמון עגלגל מעל הערך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+.
+ זה אכן המצב:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q3_1_3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+)שאלת קוד(.
+ בשאלה זו אימנו את האומד שלנו עבור דאטא שהוגרל מתוך התפלגות נורמלית שנתונה
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י:
+\begin_inset Formula 
+\[
+\overline{\mu}=\left(\begin{matrix}0\\
+0\\
+4\\
+0
+\end{matrix}\right),\Sigma=\left[\begin{matrix}1 & 0.2 & 0 & 0.5\\
+0.2 & 2 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0.5 & 0 & 0 & 1
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+בשאלה זו השתמשנו באומד שאימנו, ובדקנו מה ה
+\begin_inset Formula $Likelihood$
+\end_inset
+
+ של וקטור התוחלת עבור 
+\begin_inset Formula $\overline{\mu}=\left(\begin{matrix}\mu_{1}\\
+0\\
+\mu_{3}\\
+0
+\end{matrix}\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\mu_{1,3}$
+\end_inset
+
+ הם נעלמים בתוך הקטע 
+\begin_inset Formula $[-10,10]$
+\end_inset
+
+.
+ הדפסנו עבור כל צמד ערכים את ה
+\begin_inset Formula $likelihood$
+\end_inset
+
+ בצורת 
+\begin_inset Formula $heatmap$
+\end_inset
+
+.
+ המפה שיצאה:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename logL.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ניתן לראות בבירור שיש העדפה לערכים באזור 
+\begin_inset Formula $\mu_{1}=0$
+\end_inset
+
+ו
+\begin_inset Formula $\mu_{3}=4$
+\end_inset
+
+, כמו שהיינו מצפים.
+\begin_inset Newline newline
+\end_inset
+
+מבדיקה מדוייקת בקוד, הערכים הם )בקירוב(:
+\begin_inset Formula 
+\[
+\mu_{1}=0.050\ \ ,\mu_{3}=3.969
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

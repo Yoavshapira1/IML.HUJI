@@ -1,0 +1,3002 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage{culmus}
+
+% Convert the Lyx colors into more pleasent colors:
+\usepackage{xcolor}
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 0cm
+\headsep 0cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Title
+)
+\numeric on
+67577
+\numeric off
+( 
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $IML$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+| תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Author
+שם: יואב שפירא| ת"ז:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+312492838
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+חלק תאורטי
+\end_layout
+
+\begin_layout Subsection*
+
+\numeric on
+2.1
+\end_layout
+
+\begin_layout Enumerate
+נראה הכלה דו כיוונית:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+: יהי 
+\begin_inset Formula $v\in Ker(X)$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $Xv=0$
+\end_inset
+
+, אז ברור כי גם 
+\begin_inset Formula $X^{T}Xv=0$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $v\in Ker(X^{T}X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Longleftarrow$
+\end_inset
+
+:יהי 
+\begin_inset Formula $v\in Ker(X^{T}X)$
+\end_inset
+
+ אז:
+\begin_inset Formula 
+\begin{align*}
+X^{T}Xv=0 & \iff v^{T}X^{T}Xv=0\\
+ & \iff(Xv)^{T}Xv=0\\
+ & \iff Xv=0
+\end{align*}
+
+\end_inset
+
+כלומר 
+\begin_inset Formula $v\in Ker(X$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+טענת עזר: 
+\series default
+לכל מטריצה 
+\begin_inset Formula $A$
+\end_inset
+
+ ווקטורים 
+\begin_inset Formula $v,w$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\left\langle Av,w\right\rangle =\text{\left\langle v,A^{T}w\right\rangle }
+\]
+
+\end_inset
+
+
+\series bold
+הוכחה: 
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+\left\langle Av,w\right\rangle  & =w^{T}Av\\
+_{1} & =(A^{T}w)^{T}v\\
+_{2} & =v^{T}(A^{T}w)\\
+_{3} & =\left\langle v,A^{T}w\right\rangle 
+\end{align*}
+
+\end_inset
+
+כשהמעבר הראשון הוא מהגדרת מכפלה פנימית )והפכתי את סדר הוקטורים(,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+קיבוץ והגדרת טרנספוס, 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היפוך סדר המכפלה וטרנספוס בהתאם,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הגדרת מכפלה פנימית.
+\begin_inset Newline newline
+\end_inset
+
+כעת להוכחה הדרושה:
+\begin_inset Formula 
+\begin{align*}
+v\in Ker(A) & \iff Av=0\\
+_{1} & \iff\left\langle Av,w\right\rangle =0\ \ \forall w\\
+_{2} & \iff\left\langle v,A^{T}w\right\rangle =0\ \ \forall w\\
+_{3} & \iff v\in Im(A^{T})^{\perp}
+\end{align*}
+
+\end_inset
+
+כש
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מהגדרת מכפלה פנימית,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מהטענה למעלה,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מהגדרת מרחב ניצב.
+ 
+\begin_inset Newline newline
+\end_inset
+
+כלומר, קיבלנו כי שני הת
+\begin_inset Quotes erd
+\end_inset
+
+מ הם ניצבים זה לזה.
+ להשלמת ההוכחה הדרושה, ניתן גם לרשום בצורה שקולה: 
+\begin_inset Formula $v\in Ker(A)^{\perp}\iff v\in Im(A^{T})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ לא הפיכה ולכן יש למערכת או
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ פתרונות או אינסוף פתרונות.
+ נניח כי קיים פתרון, 
+\begin_inset Formula $y$
+\end_inset
+
+ , כלומר 
+\begin_inset Formula $y\in Im(X)$
+\end_inset
+
+.
+ כחלק מהוכחה בסעיף 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הראינו 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+שעבור 
+\begin_inset Formula $A$
+\end_inset
+
+ ריבועית מתקים 
+\begin_inset Formula $Ker(A)=Im(A^{T})^{\perp}$
+\end_inset
+
+.
+ מכיוון ש 
+\begin_inset Formula $A$
+\end_inset
+
+ ריבועית אז מתקיים גם מתכונת הטרנספוס ש 
+\begin_inset Formula $Im(A)=Ker(A^{T})^{\perp}$
+\end_inset
+
+.
+ כלומר במקרה שלנו 
+\begin_inset Formula $y\in Im(X)\iff y\perp Ker(X^{T})$
+\end_inset
+
+ כדרוש.
+\end_layout
+
+\begin_layout Enumerate
+ברור מליניארית שאם 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ הפיכה אז יש פתרון יחיד למערכת.
+ נראה שיש למערכת המשוואות אינסוף פתרונות אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ היא לא הפיכה:
+\begin_inset Newline newline
+\end_inset
+
+נניח ש
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ לא הפיכה.
+ אז מסעיף קודם, למערכת יש אינסוף פתרונות אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $X^{T}y\perp Ker(X^{T}X)$
+\end_inset
+
+ .
+ מסעיף א נובע שזה קורה אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $X^{T}y\perp Ker(X)$
+\end_inset
+
+.ניקח וקטור 
+\begin_inset Formula $v\in Ker(X)$
+\end_inset
+
+, כלומר כך 
+\begin_inset Formula $Xv=0$
+\end_inset
+
+.
+ אזי בוודאי ש 
+\begin_inset Formula $\left\langle Xv,y\right\rangle =0$
+\end_inset
+
+.
+ מהטענה בסעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתקיים כי 
+\begin_inset Formula $\left\langle Xv,y\right\rangle =\left\langle v,X^{T}y\right\rangle $
+\end_inset
+
+ וקיבלנו כי אכן 
+\begin_inset Formula $X^{T}y\perp Ker(X)=Ker(X^{T}X)$
+\end_inset
+
+.
+ כלומר 
+\begin_inset Formula $X^{T}X\ invertible\iff\infty\ solutions$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+
+\numeric on
+2.2
+\end_layout
+
+\begin_layout Standard
+אני אוכיח את המשפטים בסדר קצת שונה כדי להקל את העניינים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P$
+\end_inset
+
+ היא סימטרית:
+\begin_inset Newline newline
+\end_inset
+
+מהגדרת המטריצה מתקיים:
+\begin_inset Formula 
+\[
+P_{ij}=\sum_{l=1}^{k}v_{l_{i}}v_{l_{j}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $v_{l_{i}},v_{l_{j}}$
+\end_inset
+
+הם סקלרים אז מקומוטטיביות מתקיים:
+\begin_inset Formula 
+\[
+=\sum_{l=1}^{k}v_{l_{j}}v_{l_{i}}=P_{ji}
+\]
+
+\end_inset
+
+ כלומר 
+\begin_inset Formula $P$
+\end_inset
+
+ היא סימטרית.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P=P^{2}$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+נבצע מכפלה לפי ההגדרה:
+\begin_inset Formula 
+\begin{align*}
+P^{2}=\left(\sum_{i=1}^{k}v_{i}v_{i}^{T}\right)^{2} & =\\
+ & =v_{1}v_{1}^{T}v_{1}v_{1}^{T}+v_{1}v_{1}^{T}v_{2}v_{2}^{T}+...+v_{1}v_{1}^{T}v_{k}v_{k}^{T}+\\
+ & +.....+\\
+ & +v_{k}v_{k}^{T}v_{1}v_{1}^{T}+.........................+v_{k}v_{k}^{T}v_{k}v_{k}^{T}=\\
+ & =\sum_{i=1}^{k}\sum_{j=1}^{k}v_{i}v_{i}^{T}v_{j}v_{j}^{T}\\
+ & =\sum_{i=1}^{k}\sum_{j=1}^{k}v_{i}v_{j}^{T}v_{j}v_{i}^{T}
+\end{align*}
+
+\end_inset
+
+המעבר האחרון הוא מקומוטטיביות.
+ מכיוון ש הבסיס אורתונורמלי אז 
+\begin_inset Formula $v_{j}^{T}v_{j}=1$
+\end_inset
+
+ וקיבלנו את הדרוש:
+\begin_inset Formula 
+\[
+P^{2}=\sum_{i=1}^{k}\sum_{j=1}^{k}v_{i}\cancel{v_{j}^{T}v_{j}}v_{i}^{T}=\sum_{i=1}^{k}v_{i}v_{i}^{T}=P
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $Pv=v$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+כל השורות ב
+\begin_inset Formula $P$
+\end_inset
+
+ הם בת
+\begin_inset Quotes erd
+\end_inset
+
+ל )וגם העמודות כי 
+\begin_inset Formula $P$
+\end_inset
+
+ סימטרית אבל לא חשוב( ולכן 
+\begin_inset Formula $Rank(P)=k$
+\end_inset
+
+.
+ לכן נובע כי 
+\begin_inset Formula $dim\left(Im(P)\right)=k$
+\end_inset
+
+, ולכן נובע כי 
+\begin_inset Formula $Im(P)=V$
+\end_inset
+
+ היא בעצם מכסה את כל התת מרחב.
+ מכאן נובע שלכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ קיים 
+\begin_inset Formula $x\in V$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+Px=v
+\]
+
+\end_inset
+
+מסעיף קודם נובע כי 
+\begin_inset Formula 
+\[
+P^{2}x=Px
+\]
+
+\end_inset
+
+ נשלב הכל ונקבל את הדרוש:
+\begin_inset Formula 
+\[
+Pv=PPx=P^{2}x=Px=v
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(1-P\right)P=0$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+מסעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+זה נובע מיידית:
+\begin_inset Formula 
+\[
+(1-P)P=P-P^{2}=P^{2}-P^{2}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+בעזרת הסעיפים הקודמים נוכיח יותר ממה שצריך: ל
+\begin_inset Formula $P$
+\end_inset
+
+ יש בדיוק 
+\begin_inset Formula $k$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+ע שווים ל
+\numeric on
+1
+\numeric off
+.
+ תחילה מהגדרת ע
+\begin_inset Quotes erd
+\end_inset
+
+ע:
+\begin_inset Formula 
+\[
+Pv=\lambda v
+\]
+
+\end_inset
+
+מסעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+:
+\begin_inset Formula 
+\[
+P\cdot Pv=P^{2}=Pv
+\]
+
+\end_inset
+
+ אבל גם מהגדרת הע
+\begin_inset Quotes erd
+\end_inset
+
+ע:
+\begin_inset Formula 
+\[
+P^{2}v=P\lambda v=\lambda Pv=\lambda^{2}v
+\]
+
+\end_inset
+
+ כלומר קיבלנו כי 
+\begin_inset Formula $\lambda^{2}=\lambda$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\lambda\in\{0,1\}$
+\end_inset
+
+.
+ כמובן ש 
+\begin_inset Formula $0$
+\end_inset
+
+ מתאים לו
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $w$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $w\in Ker(P)$
+\end_inset
+
+.
+ הראינו קודם ש 
+\begin_inset Formula $V=Im(P)$
+\end_inset
+
+ ומשיקולי מימד נובע כי 
+\begin_inset Formula $dim\left(Ker(P)\right)=0$
+\end_inset
+
+, כלומר אין ו
+\begin_inset Quotes erd
+\end_inset
+
+ע שמתאים להם הערך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+.
+ כלומר ל
+\begin_inset Formula $P$
+\end_inset
+
+ יש רק ע
+\begin_inset Quotes erd
+\end_inset
+
+ע ששווים ל
+\numeric on
+1
+\numeric off
+, ולכן יש בדיוק 
+\begin_inset Formula $k$
+\end_inset
+
+ כאלה.
+ כמקרה פרטי של סעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+, לכל 
+\begin_inset Formula $i\leq k$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $Pv_{i}=v_{i}$
+\end_inset
+
+ כלומר אכן הבסיס מהווה בסיס של ו
+\begin_inset Quotes erd
+\end_inset
+
+ע המתאימים לע
+\begin_inset Quotes erd
+\end_inset
+
+ע
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Subsection*
+
+\numeric on
+2.3
+\end_layout
+
+\begin_layout Enumerate
+אנחנו נדרשים להוכיח את הטענה: עבור 
+\begin_inset Formula $X$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ הפיכה, צ
+\begin_inset Quotes erd
+\end_inset
+
+ל:
+\begin_inset Formula 
+\[
+X^{\dagger}=\left(X^{T}X\right)^{-1}X^{T}
+\]
+
+\end_inset
+
+
+\series bold
+טענת עזר: 
+\series default
+תהי 
+\begin_inset Formula $D=diag(\sigma_{1}^{2},.....,\sigma_{d}^{2})$
+\end_inset
+
+ המטריצה האלכסונית ו
+\begin_inset Formula $V$
+\end_inset
+
+ אורתונורמלית כך ש 
+\begin_inset Formula $X^{T}X=VDV^{T}$
+\end_inset
+
+ )מתרגיל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+(.
+ אז מתקיים:
+\begin_inset Formula 
+\[
+D^{-1}\Sigma^{T}=\Sigma^{\dagger}
+\]
+
+\end_inset
+
+
+\series bold
+הוכחה: 
+\series default
+
+\begin_inset Formula $D$
+\end_inset
+
+ אלכסונית עם ערכים שונים מ
+\numeric on
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כי 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ הפיכה ולכן אין לה ע
+\begin_inset Quotes erd
+\end_inset
+
+ע
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+.
+ לכן 
+\begin_inset Formula $D$
+\end_inset
+
+ הפיכה ומתקיים כי 
+\begin_inset Formula $D^{-1}=diag(\frac{1}{\sigma_{1}^{2}}.....\frac{1}{\sigma_{d}^{2}})$
+\end_inset
+
+.
+ נתבונן על 
+\begin_inset Formula $D^{-1}\Sigma^{T}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left[D^{-1}\Sigma^{T}\right]_{ij} & =\sum_{j}D_{ji}^{-1}\Sigma_{ij}^{T}
+\end{align*}
+
+\end_inset
+
+נבחין כי 
+\begin_inset Formula $D^{-1}\Sigma^{T}\in\mathbb{R}^{d\times m}$
+\end_inset
+
+, וכי עבור 
+\begin_inset Formula $i>d$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\Sigma_{ij}^{T}=0$
+\end_inset
+
+, ולכן הערך של הסכום שווה ל
+\numeric on
+0
+\numeric off
+.
+ עבור כל 
+\begin_inset Formula $i\leq d$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\sum_{j}D_{ji}^{-1}\Sigma_{ij}^{T}=\sum_{j}D_{ii}^{-1}\Sigma_{ii}^{T}=\frac{1}{\sigma_{i}^{2}}\cdot\sigma_{i}=\frac{1}{\sigma_{i}}
+\]
+
+\end_inset
+
+ומכאן קיבלנו בדיוק את ההגדרה של 
+\begin_inset Formula $\Sigma^{\dagger}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+כעת להוכחה הדרושה:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+נציג את 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ בעזרת פירוק ה
+\begin_inset Formula $SVD$
+\end_inset
+
+ שלה:
+\begin_inset Formula 
+\begin{align*}
+X^{T}X & =\left(U\Sigma V^{T}\right)^{T}\left(U\Sigma V^{T}\right)\\
+_{1} & =V\Sigma^{T}U^{T}U\Sigma V^{T}\\
+_{2} & =V\Sigma^{T}\Sigma V^{T}\\
+_{3} & =VDV^{T}
+\end{align*}
+
+\end_inset
+
+כש
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתכונה הטרנספוס,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מכך ש
+\begin_inset Formula $U$
+\end_inset
+
+ אורתונורמלית, ו
+\numeric on
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתרגיל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\begin_inset Newline newline
+\end_inset
+
+עכשיו נשתמש בזה ונסתכל על 
+\begin_inset Formula $\left(X^{T}X\right)^{-1}X^{T}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left(X^{T}X\right)^{-1}X^{T} & =\left(VDV^{T}\right)^{-1}X^{T}\\
+_{1} & =\left(VDV^{T}\right)^{-1}\left(U\Sigma V^{T}\right)^{T}\\
+_{2} & =VD^{-1}V^{T}V\Sigma^{T}U^{T}\\
+_{3} & =VD^{-1}\Sigma^{T}U^{T}\\
+_{4} & =V\Sigma^{\dagger}U^{T}=X^{\dagger}
+\end{align*}
+
+\end_inset
+
+כשב
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הצבתי את ה
+\begin_inset Formula $SVD$
+\end_inset
+
+ של 
+\begin_inset Formula $X$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נובע מתכונת האורתונורמליות של 
+\begin_inset Formula $V$
+\end_inset
+
+ להיפוך,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נובע מאורתונרלמיות של 
+\begin_inset Formula $V$
+\end_inset
+
+ לכפל עם עצמו,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מהטענת עזר.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ היא למעשה טרנספורמציה ליניארית: 
+\begin_inset Formula $X:\mathbb{R}^{m}\longrightarrow\mathbb{R}^{d}$
+\end_inset
+
+.
+ כאן אנחנו נדרשים למעשה להוכיח, ש
+\begin_inset Formula $dim\left(Ker(X^{T}X)\right)=0$
+\end_inset
+
+ )כלומר 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ הפיכה( אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $Rank(X)=d$
+\end_inset
+
+ - כלומר, הטרנספורמציה 'מכסה' את כל התת מרחב 
+\begin_inset Formula $\mathbb{R}^{d}$
+\end_inset
+
+ )ובפרט הגרעין ריק ולכן היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע(.
+ הוכחה פשוטה:
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula $Rank(X)=d$
+\end_inset
+
+ אז 
+\begin_inset Formula $dim(Im(X))=d$
+\end_inset
+
+ ואז 
+\begin_inset Formula $dim(Ker(X))=0$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $dim(Ker(X^{T}X))=0$
+\end_inset
+
+ )נובע מהשאלה הראשונה בתרגיל זה( כלומר 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ לא הפיכה, יש אינסוף פתרונות.
+ בהתאם לרמז: האינסוף פתרונות נובעים מכך ש לכל 
+\begin_inset Formula $i>d$
+\end_inset
+
+ ניתן לבחור הרבה ערכים עבור 
+\begin_inset Formula $\hat{w}_{i}$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $i\leq d$
+\end_inset
+
+, יש לנו פתרון יחיד מינימלי עבור 
+\begin_inset Formula $\hat{w}_{i}$
+\end_inset
+
+.
+ כלומר, לכל 
+\begin_inset Formula $\overline{w}$
+\end_inset
+
+ שמקיים מינימליות, מתקיים כי 
+\begin_inset Formula $\overline{w}_{i}=\hat{w}_{i}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $i\leq d$
+\end_inset
+
+.
+ עבור שאר ה 
+\begin_inset Formula $i>d$
+\end_inset
+
+, הגדרנו כי 
+\begin_inset Formula $\hat{w}_{i}=0$
+\end_inset
+
+ )כלומר אלה פיצ'רים בדאטא ש'לא מעניינים' אותנו(.
+ כלומר, 
+\begin_inset Formula $||\hat{w}||^{2}=\sum_{i=1}^{d}\overline{w}_{i}^{2}+0$
+\end_inset
+
+.
+ מכאן נובע ש:
+\begin_inset Formula 
+\[
+||\overline{w}||^{2}=\sum_{i=1}^{m}\overline{w}_{i}^{2}=\sum_{i=1}^{d}\overline{w}_{i}^{2}+\sum_{i=d+1}^{m}\overline{w}_{i}^{2}=||\hat{w}||^{2}+C\geq||\hat{w}||^{2}
+\]
+
+\end_inset
+
+כש
+\begin_inset Formula $C$
+\end_inset
+
+ קבוע כלשהו.
+ מחיוביות בהחלט של נורמה נובע כי 
+\begin_inset Formula $||\hat{w}||\leq||\overline{w}||$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\overline{w}$
+\end_inset
+
+ שמקיים את ה
+\begin_inset Formula $argMin$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+חלק פרקטי
+\end_layout
+
+\begin_layout Subsection*
+
+\numeric on
+3.1
+\end_layout
+
+\begin_layout Enumerate
+מפורט כאן התהליך שביצעתי עבור הדאטא ב
+\begin_inset Formula $Preprocessing$
+\end_inset
+
+.
+ עבור פיצ'רים קטגוריים, ביצעתי את שיטת ה
+\begin_inset Formula $Dummies\ variables$
+\end_inset
+
+, שמוסיפה פיצ'ר בוליאני לכל דגימה, עבור כל ערך של הקטגוריה.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $Na$
+\end_inset
+
+: החלפתי את כל ערכי ה
+\begin_inset Formula $Na$
+\end_inset
+
+ בערך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הממוצע של הפיצ'ר, כך שהם לא ישפיעו על השונות של הפיצ'ר.
+\end_layout
+
+\begin_layout Enumerate
+השמטתי את כל השורות עבורן 
+\begin_inset Formula $price\leq0$
+\end_inset
+
+.
+ בסופו של דבר נשארתי עם 
+\begin_inset Formula $21609$
+\end_inset
+
+ דגימות.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Categorials$
+\end_inset
+
+: את הפיצ'רים הקטגוריים פיצלתי ל
+\begin_inset Formula $Dummy\ variables$
+\end_inset
+
+ - ננניח ש 
+\begin_inset Formula $F$
+\end_inset
+
+ הוא פיצ'ר קטגורי שיכול לקבל ערך אחד מתוך 
+\begin_inset Formula $\{\alpha_{1}....\alpha_{n}\}$
+\end_inset
+
+, ו
+\begin_inset Formula $S$
+\end_inset
+
+ היא סאמפל כך ש
+\begin_inset Formula $S_{F}=\alpha_{i}$
+\end_inset
+
+.
+ מחקתי את 
+\begin_inset Formula $F$
+\end_inset
+
+ והוספתי 
+\begin_inset Formula $n$
+\end_inset
+
+ עמודות בוליאניות )אינדיקטורים( בשם 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ )לכל 
+\begin_inset Formula $i\leq n$
+\end_inset
+
+ ( כך ש 
+\begin_inset Formula 
+\[
+S_{F_{i}}=\begin{cases}
+1 & S_{F}=\alpha_{i}\\
+0 & else
+\end{cases}
+\]
+
+\end_inset
+
+ככה המידע לא נאבד מצד אחד, ומצד שני הוא לא 'מבלבל' את המודל בערכים שאין
+ ביניהם שום יחס סדר.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $zipcode$
+\end_inset
+
+: ערך קטגורי קלאסי, פיצלתי אותו ל
+\begin_inset Formula $dummy\ vars$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+הפיצ'רים של 
+\begin_inset Formula $lat,long$
+\end_inset
+
+ הם מיותרים, שכן הפיצ'ר של מיקוד מכיל את אותו המידע - מיקום הנכס.
+ החלטתי להשמיט את ה
+\begin_inset Formula $lat,long$
+\end_inset
+
+ ולהתייחס רק אל המיקוד.
+ 
+\end_layout
+
+\begin_layout Enumerate
+הפיצ'ר 
+\begin_inset Formula $date$
+\end_inset
+
+: פירשתי את הפיצ'ר כקטגורי, כי אין משמעות לחודש שהוא 
+\begin_inset Quotes eld
+\end_inset
+
+גדול
+\begin_inset Quotes erd
+\end_inset
+
+ מחודש אחר.
+ כך שחילקתי אותו לקטגוריות של שנה חודש, ויום.
+ לא רציתי להתעלם כי לתאריך בשנה של הרכישה עשוי להיות השפעה על המחיר )אפילו
+ ברמת היום בשבוע(.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+הוספתי:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+היחס בין חדרי השינה לחדרי המקלחת נשמע לי חשוב אז הוספתי פיצ'ר של היחס ביניהם:
+ 
+\begin_inset Formula $bathroom_{\ \ }bedroom_{\ }ratio$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+קראתי באינטרנט ש
+\begin_inset Formula $sqft\ living15$
+\end_inset
+
+ הוא 
+\begin_inset Quotes eld
+\end_inset
+
+הגודל הממוצע של הסלון ב
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+15
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הבתים הקרובים ביותר
+\begin_inset Quotes erd
+\end_inset
+
+.
+ בדומה כך גם 
+\begin_inset Formula $sqrt\ lot15$
+\end_inset
+
+.
+ הוספתי פיצ'ר שהוא היחס בין 
+\begin_inset Formula $sqrt\ living$
+\end_inset
+
+ ל
+\begin_inset Formula $sqrt\ living15$
+\end_inset
+
+.
+ הפיצ'רים האלה הם סוג של 'מעמד חברתי' בשכונה ולכן קראתי להם 
+\begin_inset Formula $social\ status\ living$
+\end_inset
+
+ ו
+\begin_inset Formula $social\ status\ lot$
+\end_inset
+
+.
+ )בחישוב הקורלציה של פירסון יצא להם ציון של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0.6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בערך, לא רע(
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+פיצ'ר שנראה חשוב למודל: 
+\begin_inset Formula $sqrt\ living$
+\end_inset
+
+.
+ ניתן לראות בגרף שאפשר לשרטט קו ליניארי שיסביר את המגמה, ובנוסף 
+\begin_inset Formula $Pearson\ correlation$
+\end_inset
+
+ קיבל ציון גבוה של קורלציה חיובית )
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+משמעותו קורלציה חיובית מלאה(.
+ זה הפיצ'ר שמתאר את גודל הסלון, וברור למה הוא משפיע באופן ישיר על המחיר:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/yoavs/Desktop/University/Year3/IML/IML.HUJI/exercises/feature_eval/sqft_living.jpg
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+פיצ'ר שנראה לא כל כך חשוב למודל, הוא 
+\begin_inset Formula $yr\ built$
+\end_inset
+
+.
+ ניתן לראות בגרף שהנקודות די מפוזרות וגם הציון של הקורלציה נמוך מאוד )
+\numeric on
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ משמעותו אין קורלציה בכלל(.
+ זה הפיצ'ר שמתאר את שנת הבנייה של הבית.
+ וברור למה אין קורלציה - באותה שנה יכולים להבנות בתים פשוטים ובתי פאר.
+ אולי 
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתוך בתים שמסכימים על שאר הפיצ'רים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+, שנת הבנייה היא פקטור - שכן בית ישן יותר יהיה שווה פחות )אלא אם כן חודש(.
+ )לכן השארתי אותו כפיצ'ר רגיל ולא קטגורי(.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/yoavs/Desktop/University/Year3/IML/IML.HUJI/exercises/feature_eval/yr_built.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+הגרף שיצא לי עבור ה
+\begin_inset Formula $MSE$
+\end_inset
+
+ )צריך להדגיש שלערכי ה
+\begin_inset Formula $y$
+\end_inset
+
+ אין כל משמעות ממׁשית כאן.
+ שכחתי להוריד אותם(:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q2_MSE.jpg
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ניתן ללמוד מספר תובנות:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+ככל שיש יותר דאטא לאימון, אז השגיאה יותר נמוכה.
+ בנוסף, עבור כמות דאטא נמוכה ההתנהגות לא צפויה )בא לידי ביטוי בקפיצות(.
+\end_layout
+
+\begin_layout Enumerate
+ככל שיש יותר דאטא לאימון, ה
+\series bold
+ביטחון 
+\series default
+בחיזוי הוא יותר גבוה.
+ ניתן לראות כי השונות של ה
+\begin_inset Formula $MSE$
+\end_inset
+
+ )עבור
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אינטרוולים בכל פעם( הייתה מאוד גדולה עבור כמות נמוכה של דאטא והצטמצמה מאוד
+ ככל שהוא גדל.
+\end_layout
+
+\begin_layout Enumerate
+הגרף, בגדול, לא קעור )כלומר אין לו 'בטן'( דבר שמעיד על כך שאין כאן 
+\begin_inset Formula $overfit$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם היינו קצרים בדאטא: אפשר לראות שהמודל מתייצב כבר ב
+\begin_inset Formula $75\%$
+\end_inset
+
+, ולכן היינו יכולים לתת לו פחות דאטא לאימון ועדיין היינו מקבלים תוצאות מספקות.
+ בכל זאת, זה היה עולה לנו בביטחון שכן השונות שם גדולה יותר.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+
+\numeric on
+3.2
+\end_layout
+
+\begin_layout Enumerate
+מימוש קוד
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+הגרף הבא מציג את הטמפרטורה בת
+\begin_inset Quotes erd
+\end_inset
+
+א בכל יום מימות השנה, כשלכל שנה צבע שונה:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q2_1.jpg
+	scale 38
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ניתן לראות כי יחסית, אין הרבה 'ברחנים', וגם אם יש - הם שונים בצבעם, כלומר
+ בכל שנה ההתנהגות של הגרף די דומה.
+ ניתן גם לראות שונות גדולה יותר בחודשי החורף מאשר בחודשי הקיץ כיאה למזג
+ האוויר הנהדר בלבנט.
+\begin_inset Newline newline
+\end_inset
+
+כמו כן אם מסתכלים טוב אפשר לשים לב שיש בגרף שני קיצונים וגם שתי נקודות פיתול
+ )ביום ה
+\numeric on
+125
+\numeric off
+, וביום ה
+\numeric on
+300
+\numeric off
+, בערך(.
+\begin_inset Newline newline
+\end_inset
+
+בגלל הנקודות האלה אני חושב שכדאי לבחור דרגה אי זוגית לפולינום )אחרת הצורה
+ שלו תהיה פרבולית יחסית(, ולדעתי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תהיה בחירה טובה.
+\end_layout
+
+\begin_layout Enumerate
+הגרף הבא מדגיש את נושא השונות: לכל חודש הוא מציג את הטמפרטורה הממוצעת )גובה
+ הבר( ואת הסטיית תקן )גודל הגביע(.
+ ניתן לראות בבירור שבחודשים הקרים יש יותר שונות בטמפרטורה:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Figure_1.jpg
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+בגלל השונות המשתנה, האומדן יהיה קצת מוטה: אומד 'מוצלח' יחזה את הדאטא לא
+ רע - אבל בכל זאת יטעה יותר עבור ימים שנלקחו מהחורף לעומת אלה שנלקחו מהקיץ.
+\end_layout
+
+\begin_layout Enumerate
+הגרף הבא מציג את אותו מידע מסעיף קודם רק עם פילוח לפי מדינות:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Figure_2.jpg
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+מה שאפשר ללמוד מהגרף:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+דרום אפריקה באופן מפתיע נמצאת בחצי כדור שונה מכל השאר
+\end_layout
+
+\begin_layout Enumerate
+ירדן וישראל חולקות מזג אוויר דומה ולכן מודל שאומן על ישראל יצליח לחזות די
+ טוב את הדאטא מירדן
+\end_layout
+
+\begin_layout Enumerate
+מזג האוויר הכי שונה 
+\series bold
+בממוצע 
+\series default
+מישראל נמצא בהולנד.
+ למרות המגמה המאוד דומה, הערכים הם תמיד שונים מאוד, ולכן מודל שאומן על ישראל
+ לא יצליח לחזות טוב את הדאטא מהולנד.
+\end_layout
+
+\begin_layout Enumerate
+לגבי דרום אפריקה - בגלל עונות המעבר שבהן הטמפרטורות יחסית דומות בין ישראל
+ לדרום אפריקה, יכול להיות שהמודל שאומן על ישראל, 
+\series bold
+בממוצע 
+\series default
+
+\begin_inset Formula $(MSE)$
+\end_inset
+
+ ישיג תוצאה סבירה.
+ יותר טובה משל הולנד בטוח.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+הגרף הבא מציג את השגיאה הממוצעת עבור 
+\series bold
+דאטא מישראל 
+\series default
+לכל דרגת פולינום מ
+\begin_inset Formula $1$
+\end_inset
+
+ ל
+\begin_inset Formula $10$
+\end_inset
+
+.
+ 
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+הערה: 
+\series default
+הדאטא מוצג פה ב
+\begin_inset Formula $log\ scale$
+\end_inset
+
+ ההדפסות בקוד נשארו בערכיהם המקוריים.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Figure_3.jpg
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+התחזית הייתה נכונה ואכן מתקבלת נקודת מינימום ב
+\begin_inset Formula $k=5$
+\end_inset
+
+.
+ החל משם כבר מתחיל 
+\begin_inset Formula $Overfit$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+הגרף הבא מציג את ה
+\begin_inset Formula $MSE$
+\end_inset
+
+ עבור
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ המדינות, כשהמודל אומן על דאטא מישראל:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Figure_4.jpg
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ניתן לראות שבאמת המודל חזה את ירדן הכי טוב, ואת דרום אפריקה יותר טוב מהולנד
+ - תודות לעונות המעבר שבהן הטמפרטורה של ישראל ודרום אפריקה יחסית דומות.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

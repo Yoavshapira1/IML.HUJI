@@ -1,0 +1,1336 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage{culmus}
+
+% Convert the Lyx colors into more pleasent colors:
+\usepackage{xcolor}
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 0cm
+\headsep 0cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Title
+)
+\numeric on
+67577
+\numeric off
+( 
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $IML$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+| תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\end_layout
+
+\begin_layout Author
+שם: יואב שפירא| ת"ז:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+312492838
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+חלק תאורטי
+\end_layout
+
+\begin_layout Enumerate
+תחילה נשים לב ש
+\begin_inset Formula 
+\[
+argMin_{w}||w||^{2}=argMin_{w}\left(\frac{1}{2}||w||^{2}\right)
+\]
+
+\end_inset
+
+ולכן אתייחס מעתה לבעיה עם הכפילה בחצי.
+ לבעיות מינימיזציה עם אילוצים ניתן להגדיר את הלגראנז'יאן ולפתור בעזרתו.
+ במגרה זה האילוץ הוא א
+\begin_inset Quotes erd
+\end_inset
+
+ש, ולכן נצטרך להתייחס אליו מאוחר יותר כדי לדאוג שהוא נשמר.
+ נגדיר:
+\begin_inset Formula 
+\[
+L(w,b,\overline{\lambda})=\frac{1}{2}||w||^{2}+\sum_{i}\lambda_{i}\left(y_{i}w_{i}x_{i}+y_{i}b-1\right)
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\overline{\lambda}=\left(\begin{matrix}\lambda_{1}\\
+\vdots\\
+\lambda_{n}
+\end{matrix}\right)$
+\end_inset
+
+ כופלי לגראנז'.
+ כעת הבעיה המקורית שקולה לבעיה של חישוב 
+\begin_inset Formula $argMin_{w,b,a}\left(L\left(w,b,\overline{\lambda}\right)\right)$
+\end_inset
+
+.
+ נפרש את הביטוי:
+\begin_inset Formula 
+\begin{align*}
+L(w,b,\overline{\lambda}) & =\frac{1}{2}||w||^{2}+\sum_{i}\lambda_{i}\left(y_{i}w_{i}x_{i}+y_{i}b-1\right)\\
+ & =\frac{1}{2}w^{T}w+\sum_{i}\lambda_{i}y_{i}w_{i}x_{i}+\sum_{i}\lambda_{i}y_{i}b-\sum_{i}\lambda_{i}
+\end{align*}
+
+\end_inset
+
+נבחין כי 
+\begin_inset Formula $w$
+\end_inset
+
+ האופטימלי לבעיה זו מקיים:
+\begin_inset Formula 
+\[
+argMin_{w}\left(L\left(w,b,\overline{\lambda}\right)\right)=argMin_{w}\left(\frac{1}{2}w^{T}w+\sum_{i}\lambda_{i}y_{i}w_{i}x_{i}\right)
+\]
+
+\end_inset
+
+ כלומר החלקים שאינם תלויים ב
+\begin_inset Formula $w$
+\end_inset
+
+ לא משנים את הפיתרון.
+ לכן נוכל להגדיר:
+\begin_inset Formula 
+\[
+v=w\ \ ,Q=I,\ \ a=\sum\lambda_{i}y_{i}x_{i}\in\mathbb{R}^{n}
+\]
+
+\end_inset
+
+ונקבל שהבעיה שאנחנו רוצים לפתור היא:
+\begin_inset Formula 
+\[
+argMin_{v}\frac{1}{2}v^{T}Qv+a^{T}v
+\]
+
+\end_inset
+
+נשים לב לאילוצים: האילוץ המקורי הוא )בפישוט(:
+\begin_inset Formula 
+\begin{align*}
+\forall_{i} & :\ y_{i}w_{i}x_{i}+y_{i}b\geq1\\
+\iff & -y_{i}x_{i}w_{i}\leq1-y_{i}b\\
+\iff & \left(-X^{T}\overline{y}\right)w\leq1-\overline{y}b
+\end{align*}
+
+\end_inset
+
+ועל כן נגדיר:
+\begin_inset Formula 
+\[
+A=-X^{T}\overline{y},\ \ d=1-\overline{y}b
+\]
+
+\end_inset
+
+ונקבל שהאילוץ החדש הוא אכן 
+\begin_inset Formula $Av\leq d$
+\end_inset
+
+.
+ חשוב להדגיש, שבגלל צורת הפיתרון שנובעת מהלגראנז'יאן, יש לנו גם אילוץ על
+ ה
+\begin_inset Formula $\overline{\lambda}$
+\end_inset
+
+: הוא חייב להיות אי שלילי.
+ כלומר לכל 
+\begin_inset Formula $i$
+\end_inset
+
+ צ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $\lambda_{i}\geq0$
+\end_inset
+
+.
+ זוהי עדיין 
+\begin_inset Formula $QP$
+\end_inset
+
+: בעיית אופטימיזציה ריבועית תחת אילוצים ליניאריים.
+\end_layout
+
+\begin_layout Enumerate
+בעצם צ
+\begin_inset Quotes erd
+\end_inset
+
+ל ש:
+\begin_inset Formula 
+\[
+\xi_{i}=\ell^{h}\left(y_{i}\left\langle w,x_{i}\right\rangle \right)\iff\xi_{i}\geq0\land y_{i}\left\langle w,x_{i}\right\rangle \geq1-\xi_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+: נניח כי 
+\begin_inset Formula $\xi_{i}\geq0\land y_{i}\left\langle w,x_{i}\right\rangle \geq1-\xi_{i}$
+\end_inset
+
+.
+ אז: 
+\begin_inset Formula 
+\[
+\ell^{h}\left(y_{i}\left\langle w,x_{i}\right\rangle \right)=max\left\{ 0,1-y_{i}\left\langle w,x_{i}\right\rangle \right\} 
+\]
+
+\end_inset
+
+נשים לב כי מתקיים מההנחה ש:
+\begin_inset Formula 
+\[
+1-y_{i}\left\langle w,x_{i}\right\rangle \leq1-\left(1-\xi_{i}\right)=\xi_{i}
+\]
+
+\end_inset
+
+וכמו כן מההנחה ש
+\begin_inset Formula $\xi_{i}\geq0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\ell^{h}\left(y_{i}\left\langle w,x_{i}\right\rangle \right)=\xi_{i}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Longleftarrow$
+\end_inset
+
+: נניח כי 
+\begin_inset Formula $\xi_{i}=\ell^{h}\left(y_{i}\left\langle w,x_{i}\right\rangle \right)$
+\end_inset
+
+.
+ אז זה אומר ש 
+\begin_inset Formula 
+\[
+max\left\{ 0,1-y_{i}\left\langle w,x_{i}\right\rangle \right\} =\xi_{i}
+\]
+
+\end_inset
+
+כלומר בכל מקרה 
+\begin_inset Formula $\xi_{i}\geq0$
+\end_inset
+
+ וגם 
+\begin_inset Formula $1-y_{i}\left\langle w,x_{i}\right\rangle =\xi_{i}$
+\end_inset
+
+, ובפרט מתקיים ש
+\begin_inset Formula $y_{i}\left\langle w,x_{i}\right\rangle \geq1-\xi_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+נעשה פה ניתוח של מעריך בייסיאני גאוסיאני בצורה דומה לניתוח שנעשה בתרגול
+ עם ה
+\begin_inset Formula $LDA$
+\end_inset
+
+, כשנשים לב לשוני המהותי בין השניים: ה
+\begin_inset Formula $LDA$
+\end_inset
+
+ הוא ליניארי, ומניח כי כל המחלקות שניתן לסווג אליהן מתפלגות עם אותה שונות
+ רק עם תוחלת שונה.
+ המעריך הגאוסיאני בייסיאני לא מניח שונות שווה, אלא מניח שכל המחלקות מתפלגות
+ נורמלית עם תוחלת ושונות 
+\series bold
+אחרים
+\series default
+, ובנוסף מניח אי-תלות של הפיצ'רים בדאטא )וכאן הוא שונה מ
+\begin_inset Formula $QDA$
+\end_inset
+
+.
+ זה יהיה ההבדל בסעיף ב(: כתוצאה מכך יוצא מעריך לא ליניארי, שבנוסף מעריך
+ סטיית תקן 
+\series bold
+לכל אחת מהמחלקות 
+\series default
+.
+ בגלל אי התלות יוצא שלכל מחלקה יש קו-ווריאנס אלכסוני )כי כל הפיצ'רים בת
+\begin_inset Quotes erd
+\end_inset
+
+ל(.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+לפיתוח:
+\begin_inset Newline newline
+\end_inset
+
+נפתח את הביטוי שעליו צריך למצוא 
+\begin_inset Formula $argMax$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\phi(\Theta|X,Y)=f_{X,Y|\Theta}(\{X_{i},y_{i}\}_{i=1}^{m})
+\]
+
+\end_inset
+
+כלומר למצוא פרמטרים להתפלגויות הנתונות, כך שימקסמו את הביטוי הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+ נסמן ב
+\begin_inset Formula $k$
+\end_inset
+
+ את המחלקות האפשריות של 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\mathbb{P}(y_{i}=k)=\pi_{k}=\pi_{y_{i}}$
+\end_inset
+
+.
+ נפתח:
+\begin_inset Formula 
+\begin{align*}
+\phi(\Theta|X,Y) & =f_{X,Y|\Theta}(\{X_{i},y_{i}\}_{i=1}^{m})\\
+_{i.i.d} & =\prod_{i=1}^{m}\left(f_{X_{i},y_{i}=k|\Theta}\left(X_{i},k\right)\right)\\
+ & =\prod_{i=1}^{m}\left(f_{X_{i}|y_{i}=k}(X_{i})\cdot f_{y_{i}=k|\Theta}(k)\right)\\
+ & =\prod_{i=1}^{m}\left(\mathcal{N}\left(\mu_{y_{i}},\sigma_{y_{i}}\right)\cdot\pi_{y_{i}}\right)
+\end{align*}
+
+\end_inset
+
+כשהמעבר האחרון מההתפלגויות הנתונות לנו.
+ ניקח לוגריתם:
+\begin_inset Formula 
+\begin{align*}
+log\left(\phi(\Theta|X,Y)\right) & =log\prod_{i=1}^{m}\left(\mathcal{N}\left(\mu_{y_{i}},\sigma_{y_{i}}\right)\cdot\pi_{y_{i}}\right)\\
+ & =\sum_{i=1}^{m}log\left(\mathcal{N}\left(\mu_{y_{i}},\sigma_{y_{i}}\right)\cdot\pi_{y_{i}}\right)\\
+ & =\sum_{i=1}^{m}log\left(\frac{1}{\sqrt{2\pi\sigma_{y_{i}}^{2}}}\cdot exp\left(\frac{(x_{i}-\mu_{y_{i}})^{2}}{2\sigma_{y_{i}}^{2}}\right)\cdot\pi_{y_{i}}\right)\\
+_{log\ rules} & =\sum_{i=1}^{m}log\left(\pi_{y_{i}}\right)-log\left(\sqrt{2\pi\sigma_{y_{i}}^{2}}\right)-\frac{(x_{i}-\mu_{y_{i}})^{2}}{2\sigma_{y_{i}}^{2}}\\
+_{more} & =\sum_{i=1}^{m}log\left(\pi_{y_{i}}\right)-\frac{1}{2}log\left(\sigma_{y_{i}}^{2}\right)-\frac{1}{2}log\left(2\pi\right)-\frac{(x_{i}-\mu_{y_{i}})^{2}}{2\sigma_{y_{i}}^{2}}
+\end{align*}
+
+\end_inset
+
+בצורה דומה לנעשה בתרגול, נסמן ב
+\begin_inset Formula $n_{k}$
+\end_inset
+
+ את מספר המופעים של הלייבל ה
+\begin_inset Formula $k$
+\end_inset
+
+ בדאטא, כלומר 
+\begin_inset Formula $n_{k}=\sum_{i=1}^{m}\mathbb{I}_{\left[y_{i}=k\right]}$
+\end_inset
+
+.
+ ככה ניתן לרשום את הביטוי למעלה כ:
+\begin_inset Formula 
+\[
+log\left(\phi(\Theta|X,Y)\right)=\sum_{k}n_{k}log\left(\pi_{k}\right)-\frac{1}{2}\sum_{i}\frac{\mathbb{I}_{\left[y_{i}=k\right]}\left(x_{i}-\mu_{k}\right)^{2}}{\sigma_{k}^{2}}-\sum\frac{n_{k}}{2}log\left(\sigma_{k}^{2}\right)
+\]
+
+\end_inset
+
+את הביטוי הזה צריך למקסם לפי הפרמטרים.
+ בנוסף יש אילוץ על 
+\begin_inset Formula $\pi_{k}$
+\end_inset
+
+ : 
+\begin_inset Formula $\sum_{k}\pi_{k}=1$
+\end_inset
+
+.
+ נרכיב לגראנז'יאן לביטוי:
+\begin_inset Formula 
+\[
+\mathcal{L}\left(\hat{\pi},\hat{\mu},\hat{\sigma},\lambda\right)=log\left(\phi(\Theta|X,Y)\right)-\lambda\left(\sum_{k}\pi_{k}-1\right)
+\]
+
+\end_inset
+
+נגזור תחילה לפי 
+\begin_inset Formula $\pi$
+\end_inset
+
+ ונקבל:
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\pi_{k}}=\frac{\partial log\left(\phi(\Theta|X,Y)\right)}{\partial\pi_{k}}-\lambda\cdot\frac{\partial\mathcal{L}}{\partial\pi_{k}}=\frac{n_{k}}{\pi_{k}}-\lambda
+\]
+
+\end_inset
+
+נשווה ל
+\numeric on
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ונקבל 
+\begin_inset Formula 
+\[
+\hat{\pi}_{k}=\frac{n_{k}}{\lambda}
+\]
+
+\end_inset
+
+מהתנאי ש
+\begin_inset Formula $\sum_{k}\pi_{k}=1$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $\lambda=m$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+הפרמטר 
+\begin_inset Formula $\mu$
+\end_inset
+
+ מביא את אותו ביטוי שראינו בתרגול )רק הפעם חד מימדי, יותר פשוט( ולכן נקבל
+ 
+\begin_inset Formula 
+\[
+\hat{\mu}_{k}=\frac{1}{n_{k}}\sum\mathbb{I}_{\left[y_{i}=k\right]}x_{i}\in\mathbb{R}
+\]
+
+\end_inset
+
+כלומר התוחלת של כל הדגימות שהלייבל שלהם הוא 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ זוהי תוצאה לתוצאה שקיבלנו ב
+\begin_inset Formula $LDA$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+עבור ה
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אנחנו מקבלים הפעם ביטוי קצת שונה בגלל ההנחות השונות: במקום שונות אחת משותפת
+ לכל הלייבלים כמו ב
+\begin_inset Formula $LDA$
+\end_inset
+
+, אנחנו רוצים לבטא את השונות של כל לייבל בנפרד.
+ כלומר:
+\begin_inset Formula 
+\[
+\hat{\sigma}_{k}^{2}=\frac{1}{n_{k}}\sum\mathbb{I}_{\left[y_{i}=k\right]}\left(x_{i}-\hat{\mu}_{k}\right)^{2}\in\mathbb{R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+כעת נרחיב ל
+\begin_inset Formula $d$
+\end_inset
+
+ פיצ'רים של הדאטא, ונסמן 
+\begin_inset Formula $\overline{x_{i}}\in\mathbb{R}^{d}$
+\end_inset
+
+ דגימה מהדאטא.
+ נחזור ל
+\begin_inset Formula $likelihood$
+\end_inset
+
+ )לוג( מסעיף קודם ונחיל את הנוסחה של גאוסיאן רב מימדי:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+log\left(\phi(\Theta|X,Y)\right) & =log\prod_{i=1}^{m}\left(\mathcal{N}\left(\overline{\mu}_{y_{i}},\Sigma_{y_{i}}\right)\cdot\pi_{y_{i}}\right)\\
+ & =\sum_{i=1}^{m}log\left(\mathcal{N}\left(\overline{\mu}_{y_{i}},\Sigma_{y_{i}}\right)\cdot\pi_{y_{i}}\right)\\
+ & =\sum_{i=1}^{m}log\left(\frac{1}{\sqrt{\left(2\pi\right)^{d}\left|\Sigma_{y_{i}}\right|}}\cdot exp\left(-\frac{1}{2}(x_{i}-\overline{\mu}_{y_{i}})^{T}\Sigma_{y_{i}}^{-1}(x_{i}-\overline{\mu}_{y_{i}})\right)\cdot\pi_{y_{i}}\right)\\
+_{log\ rules} & =\sum_{i=1}^{m}log\left(\pi_{y_{i}}\right)-log\left(\sqrt{\left(2\pi\right)^{d}\left|\Sigma_{y_{i}}\right|}\right)-\frac{1}{2}(x_{i}-\overline{\mu}_{y_{i}})^{T}\Sigma_{y_{i}}^{-1}(x_{i}-\overline{\mu}_{y_{i}})\\
+_{more} & =\sum_{i=1}^{m}log\left(\pi_{y_{i}}\right)-\frac{d}{2}log\left(2\pi\right)-\frac{1}{2}log\left(\left|\Sigma_{y_{i}}\right|\right)-\frac{1}{2}(x_{i}-\overline{\mu}_{y_{i}})^{T}\Sigma_{y_{i}}^{-1}(x_{i}-\overline{\mu}_{y_{i}})
+\end{align*}
+
+\end_inset
+
+נרצה למקסם את הביטוי, ונבחין כי 
+\begin_inset Formula $-\frac{d}{2}log\left(2\pi\right)$
+\end_inset
+
+ הוא קבוע ולכן נתעלם ממנו בשלב זה.
+\begin_inset Newline newline
+\end_inset
+
+באותה צורה כמו בחד מימדי, נשתמש באינדיקטורים כדי לרשום את הנוסחה בצורה קצת
+ שונה: 
+\begin_inset Formula 
+\[
+log\left(\phi(\Theta|X,Y)\right)=\sum_{k}n_{k}log\left(\pi_{k}\right)-\frac{1}{2}log\left(\left|\Sigma_{k}\right|\right)-\frac{1}{2}\sum_{i}\mathbb{I}_{\left[y_{i}=k\right]}(x_{i}-\overline{\mu}_{k})^{T}\Sigma_{k}^{-1}(x_{i}-\overline{\mu}_{k})
+\]
+
+\end_inset
+
+נרכיב לגראנז'יאן שיכלול את האילוץ על 
+\begin_inset Formula $\pi_{k}$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{L}\left(\hat{\pi},\hat{\overline{\mu}},\hat{\Sigma},\lambda\right)=log\left(\phi(\Theta|X,Y)\right)-\lambda\left(\sum_{k}\pi_{k}-1\right)
+\]
+
+\end_inset
+
+ניתן לראות בקלות שגזירת לפי 
+\begin_inset Formula $\pi_{k}$
+\end_inset
+
+נותנת בדיוק את אותה תוצאה:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\pi}_{k}=\frac{n_{k}}{m}
+\]
+
+\end_inset
+
+הגזירה לפי 
+\begin_inset Formula $\overline{\mu_{k}}$
+\end_inset
+
+ זהה לגזירה שראינו בתרגול הפעם.
+ נקבל:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\overline{\mu}}_{k}=\frac{1}{n_{k}}\sum\mathbb{I}_{\left[y_{i}=k\right]}\overline{x}_{i}\in\mathbb{R}^{d}
+\]
+
+\end_inset
+
+ולמעשה סיימנו- השונות מוגדרת ע
+\begin_inset Quotes erd
+\end_inset
+
+י ההנחה של האומד, והיא שונות אחרת לכל 
+\begin_inset Formula $k$
+\end_inset
+
+ וגם פיצ'רים בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\begin_inset Newline newline
+\end_inset
+
+תחת ההנחה שכל הפיצ'רים הם בת
+\begin_inset Quotes erd
+\end_inset
+
+ל, המטריצת שונות תהיה 
+\series bold
+אלכסונית
+\series default
+, )בגודל 
+\begin_inset Formula $d$
+\end_inset
+
+ על 
+\begin_inset Formula $d$
+\end_inset
+
+( - אם כל הפיצ'רים הם בת
+\begin_inset Quotes erd
+\end_inset
+
+ל, אז אין ביניהם קורלציה, וכל האיברים מחוץ לאלכסון שווים ל
+\numeric on
+0
+\numeric off
+.
+ לכן נוכל פשוט לבטא את השונות של לייבל 
+\begin_inset Formula $k$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י לקיחת כל האיברים על האלכסון והרכבת וקטור עם 
+\begin_inset Formula $d$
+\end_inset
+
+ כניסות.
+ כלומר נגדיר:
+\begin_inset Formula 
+\[
+\hat{\overline{\sigma}}_{k}^{2}=Diag\left(\sum\mathbb{I}_{\left[y_{i}=k\right]}\left(x_{i}-\hat{\overline{\mu}}_{k}\right)\left(x_{i}-\hat{\overline{\mu}}_{k}\right)^{T}\right)
+\]
+
+\end_inset
+
+ובסופו של דבר לצורך המימוש בקוד, נרכיב מטריצת שונויות שתבוטא כך:
+\begin_inset Formula 
+\[
+Vars=\left[\begin{matrix}\hat{\overline{\sigma}}_{1}^{2}\\
+\vdots\\
+\hat{\overline{\sigma}}_{k}^{2}
+\end{matrix}\right]\in\mathbb{R}^{k\times d}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+פואסון חד מימדי: 
+\series default
+נתון כי
+\begin_inset Formula 
+\[
+f_{y}(k)=\pi_{k}\ ,f_{x_{i}|y_{i}}(x_{i})=\frac{\lambda_{y_{i}}^{-x_{i}}\cdot e^{-\lambda_{y_{i}}}}{x_{i}!}
+\]
+
+\end_inset
+
+והאילוץ הרגיל על 
+\begin_inset Formula $\sum_{k}\pi_{k}=1$
+\end_inset
+
+.
+ צריך למקסם את הביטוי:
+\begin_inset Formula 
+\begin{align*}
+\phi(\Theta|X,Y) & =f_{X,Y|\Theta}(\{X_{i},y_{i}\}_{i=1}^{m})\\
+_{i.i.d} & =\prod_{i=1}^{m}\left(f_{x_{i},y_{i}|\Theta}\left(x_{i},y_{i}\right)\right)\\
+ & =\prod_{i=1}^{m}\left(f_{x_{i}|y_{i}}(x_{i})\cdot f_{y_{i}}(y_{i})\right)\\
+ & =\prod_{i=1}^{m}\left(\frac{\lambda_{y_{i}}^{-x_{i}}\cdot e^{-\lambda_{y_{i}}}}{x_{i}!}\cdot\pi_{y_{i}}\right)
+\end{align*}
+
+\end_inset
+
+צריך למקסם אז אפשר לקחת לוגריתם:
+\begin_inset Formula 
+\begin{align*}
+log\left(\phi(\Theta|X,Y)\right) & =\sum_{i}^{m}log\left(\frac{\lambda_{y_{i}}^{x_{i}}\cdot e^{-\lambda_{y_{i}}}}{x_{i}!}\cdot\pi_{y_{i}}\right)\\
+ & =\sum_{i}^{m}\left[log\left(\lambda_{y_{i}}^{x_{i}}\right)+log\left(e^{-\lambda_{y_{i}}}\right)+log\left(\pi_{y_{i}}\right)-log\left(x_{i}!\right)\right]\\
+ & =-\sum_{i}^{m}log\left(x_{i}!\right)+\sum_{i}^{m}\left[x_{i}log\left(\lambda_{y_{i}}\right)-\lambda_{y_{i}}+log\left(\pi_{y_{i}}\right)\right]
+\end{align*}
+
+\end_inset
+
+נבחין כי הביטוי הראשון הוא קבוע ולכן נשמיט אותו מכאן.
+ נשתמש באינדיקטורים כדי לספור מופעים על 
+\begin_inset Formula $y_{i}=k$
+\end_inset
+
+, ונכתוב את הביטוי כך:
+\begin_inset Formula 
+\[
+log\left(\phi(\Theta|X,Y)\right)=\sum_{i}^{m}\mathbb{I}_{\left[y_{i}=k\right]}\cdot x_{i}log\left(\lambda_{y_{i}}\right)-n_{k}\lambda_{k}+n_{k}log\left(\pi_{k}\right)
+\]
+
+\end_inset
+
+נרכיב את הלגראנז'יאן:
+\begin_inset Formula 
+\[
+\mathcal{L}\left(\hat{\pi},\hat{\lambda},\tau\right)=log\left(\phi(\Theta|X,Y)\right)-\tau\left(\sum_{k}\pi_{k}-1\right)
+\]
+
+\end_inset
+
+למנוע בלבול: כאן 
+\begin_inset Formula $\tau$
+\end_inset
+
+ הם כופלי לגראנז.
+ נגזור לפי 
+\begin_inset Formula $\pi_{k}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\pi_{k}}=\frac{n_{k}}{\pi_{k}}-\tau
+\]
+
+\end_inset
+
+נקבל את אותה תוצאה כמו בשאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+: 
+\begin_inset Formula 
+\[
+\hat{\pi}_{k}=\frac{n_{k}}{m}
+\]
+
+\end_inset
+
+נגזור לפי 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\lambda_{k}}=-n_{k}+\sum_{i}^{m}\mathbb{I}_{\left[y_{i}=k\right]}\cdot x_{i}log\left(\lambda_{y_{i}}\right)\overset{!}{=}0
+\]
+
+\end_inset
+
+נקבל ש:
+\begin_inset Formula 
+\[
+\lambda_{k}=\frac{\sum_{i}^{m}\mathbb{I}_{\left[y_{i}=k\right]}\cdot x_{i}}{n_{k}}
+\]
+
+\end_inset
+
+כלומר- פשוט התוחלת של כל הסאמפלים שהלייבל שלהם הוא 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+פואסון רב מימדי: 
+\series default
+כעת 
+\begin_inset Formula $f_{x_{i}|y_{i}}(x_{i})=\prod_{j=1}^{d}\frac{\lambda_{y_{i,j}}^{x_{i}j}\cdot e^{-\lambda_{y_{i,j}}}}{x_{ij}!}$
+\end_inset
+
+ כלומר לכל 
+\begin_inset Formula $\overline{x_{i}}$
+\end_inset
+
+ יש 
+\begin_inset Formula $d$
+\end_inset
+
+ פיצ'רים שכולם מתפלגים פואסון עם פרמטר 
+\begin_inset Formula $\lambda_{y_{i},j}$
+\end_inset
+
+ באופן בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+ נפתח את הלוג-לייקליהוד:
+\begin_inset Formula 
+\begin{align*}
+\phi(\Theta|X,Y) & =f_{X,Y|\Theta}(\{X_{i},y_{i}\}_{i=1}^{m})\\
+_{i.i.d} & =\prod_{i=1}^{m}\left(f_{x_{i},y_{i}|\Theta}\left(x_{i},y_{i}\right)\right)\\
+ & =\prod_{i=1}^{m}\left(f_{x_{i}|y_{i}}(x_{i})\cdot f_{y_{i}}(y_{i})\right)\\
+ & =\prod_{i=1}^{m}\left(\prod_{j=1}^{d}\frac{\lambda_{y_{i,j}}^{x_{i}j}\cdot e^{-\lambda_{y_{i,j}}}}{x_{ij}!}\cdot\pi_{y_{i}}\right)
+\end{align*}
+
+\end_inset
+
+ניקח לוג:
+\begin_inset Formula 
+\begin{align*}
+log\left(\phi(\Theta|X,Y)\right) & =\sum_{i}^{m}log\left(\prod_{j=1}^{d}\frac{\lambda_{y_{i,j}}^{x_{i}j}\cdot e^{-\lambda_{y_{i,j}}}}{x_{ij}!}\cdot\pi_{y_{i}}\right)\\
+ & =\sum_{i}^{m}\sum_{j}^{d}\left[log\left(\lambda_{y_{i,j}}^{x_{i}j}\right)+log\left(e^{-\lambda_{y_{i,j}}}\right)+log\left(\pi_{y_{i}}\right)-log\left(x_{ij}!\right)\right]\\
+ & =-\sum_{i}^{m}\sum_{j}^{d}log\left(x_{i}!\right)+\sum_{i}^{m}\sum_{j}^{d}\left[x_{i}log\left(\lambda_{y_{i}}\right)-\lambda_{y_{i}}+log\left(\pi_{y_{i}}\right)\right]
+\end{align*}
+
+\end_inset
+
+הראשון קבוע ויושמט, ועכשיו נשתמש בטריק האינדיקטור:
+\begin_inset Formula 
+\[
+=\sum_{k}\sum_{j}^{d}\left[\sum_{i}\mathbb{I}_{\left[y_{i}=k\right]}x_{i}log\left(\lambda_{y_{i}}\right)+n_{k}\left(log\left(\pi_{k}\right)-\lambda_{k,j}\right)\right]
+\]
+
+\end_inset
+
+נרכיב לגראנז'יאן כמו מקודם )
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ הביטוי ו
+\begin_inset Formula $\tau$
+\end_inset
+
+ הכופלים( ונגזור לפי 
+\begin_inset Formula $\pi_{k}$
+\end_inset
+
+ ונקבל:
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\pi_{k}}=\frac{dn_{k}}{\pi_{k}}-\tau\overset{!}{=}0\Longrightarrow\pi_{k}=\frac{dn_{k}}{\tau}
+\]
+
+\end_inset
+
+מכך ש 
+\begin_inset Formula $\sum_{k}\pi_{k}=1$
+\end_inset
+
+ נקבל ש
+\begin_inset Formula 
+\[
+\sum_{k}\frac{dn_{k}}{\tau}=1\Longrightarrow\tau=md
+\]
+
+\end_inset
+
+ומכאן נקבל בסהכ כי 
+\begin_inset Formula $\hat{\pi}_{k}=\frac{n_{k}}{m}$
+\end_inset
+
+ באופן מאוד לא מפתיע.
+\begin_inset Newline newline
+\end_inset
+
+נגזור לפי 
+\begin_inset Formula $\lambda_{kj}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\lambda_{kj}}=-n_{k}+\sum_{i}\mathbb{I}_{\left[y_{i}=k\right]}x_{i}log\left(\lambda_{y_{i}}\right)
+\]
+
+\end_inset
+
+בדיוק כמו בסעיף החד מימדי.
+ נקבל ש 
+\begin_inset Formula $\hat{\lambda}_{k,j}=\frac{\sum_{i}\mathbb{I}_{\left[y_{i}=k\right]}x_{i,j}}{n_{k}}$
+\end_inset
+
+, התוחלת של הפיצ'ר ה
+\begin_inset Formula $j$
+\end_inset
+
+ בתוך כל הסאמפלים שהלייבל שלהם הוא 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Part*
+חלק פרקטי
+\end_layout
+
+\begin_layout Section*
+
+\lang english
+Perceptron classifier
+\end_layout
+
+\begin_layout Enumerate
+הגרף הבא מציג את אחוז השגיאות, כלומר 
+\begin_inset Formula $Misclassification$
+\end_inset
+
+, עבור הדאטא שניתן להפרדה ליניארית כפונקצייה של האיטרציות בפונקציית ה
+\begin_inset Formula $Fit$
+\end_inset
+
+ של הפרספטרון:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q3.1.1.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ניתן לראות שלא הגענו למקסימום איטרציות, כלומר הגענו למצב שבו 
+\series bold
+כל 
+\series default
+הקלסיפיקציות נכונות - מצאנו מישור שמפריד ליניארית את הדאטא.
+ 
+\end_layout
+
+\begin_layout Enumerate
+הגרף הבא מציג את אותה הפונקצייה אך עבור הדאטא שאינו ניתן להפרדה:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q3.1.2.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+הגרף מתנהג בצורה משוגעת כי אנחנו מחפשים מישור שיהיה 'צודק' לגבי כל הנקודות
+ בדאטא, ומכיוון שזה דאטא שאי אפשר להפריד ליניארית זה מצב לא אפשרי.
+ זו גם הסיבה שהגענו למקסימום איטרציות שאפשרנו.
+ אם היינו 'מתפשרים' על 
+\begin_inset Formula $Soft-SVM$
+\end_inset
+
+ כלומר על מישור שנותן מרווח טעות, אך מינימלית - היה אפשר להוציא תוצאה די
+ טובה, בערך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $0.06\%$
+\end_inset
+
+ טעות, המינימום שמופיע בגרף.
+ רוב הדאטא בעולם הוא לא ניתן להפרדה ליניארית או לפחות לא ידוע לנו עליו שכן,
+ והתעקשות על 
+\begin_inset Formula $Hard-SVM$
+\end_inset
+
+ הרבה פעמים תביא תוצאות לא כל כך טובות כמו זו.
+\end_layout
+
+\begin_layout Section*
+
+\lang english
+Bayes classifiers
+\end_layout
+
+\begin_layout Standard
+בגרפים הבאים לכל מחלקה ניתן צבע וצורה המופיעים במקרא.
+ נקודה על הגרף שאיננה תואמת למקרא, משמעותה טעות בסיווג.
+\end_layout
+
+\begin_layout Enumerate
+הגרף הבא מציג ריצה של 
+\begin_inset Formula $LDA$
+\end_inset
+
+ ושל 
+\begin_inset Formula $GNB$
+\end_inset
+
+ על דאטא ללא קורלציה, או קורלציה חלשה, בין הפיצ'רים: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename uncorr.png
+	scale 65
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ניתן לראות שעבור שה
+\begin_inset Formula $GNB$
+\end_inset
+
+ הצליח יותר בחיזוי שלו, ולכן ניתן להניח שהדאטא מקיים )או כמעט מקיים( את
+ ההנחות שלו: מכיוון שהוא מניח דאטא שמגיע מהתפלגויות שונות )גאוסיאנים, אבל
+ פרמטרים שונים(, ניתן לומר שההתפלגות שממנה נדגם הדאטא באמת מתנהגת כך: לכל
+ לייבל יש התפלגות שונה.
+ כמו כן ה
+\begin_inset Formula $GNB$
+\end_inset
+
+ מניח אי תלות בין הפיצ'רים של הדאטא, שאת זה ניתן לראות בעיניים שמתקיים כאן,
+ ולכן הוא זכה להצלחה גדולה.
+ אף על פי כן, מכך שה
+\begin_inset Formula $LDA$
+\end_inset
+
+ 
+\series bold
+הלינארי
+\series default
+ הצליח גם לא רע יחסית, אפשר ללמוד שבין כל התפלגות של שני לייבלים, אפשר למצוא
+ איזשהו מישור מפריד שיהיה יחסית מוצלח )ואכן אפשר לראות בעיניים שזה המצב(.
+\end_layout
+
+\begin_layout Enumerate
+הגרף הבא מציג ריצה של 
+\begin_inset Formula $LDA$
+\end_inset
+
+ ושל 
+\begin_inset Formula $GNB$
+\end_inset
+
+ על דאטא עם קורלציה חיובית חזקה בין הפיצ'רים:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename corr.png
+	scale 65
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ה
+\begin_inset Formula $LDA$
+\end_inset
+
+ מוצלח יותר מה
+\begin_inset Formula $GNB$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+מכיוון שההצלחה של 
+\begin_inset Formula $LDA$
+\end_inset
+
+ גבוהה, ניתן ללמוד שהדאטא מקיים )או כמעט מקיים( את ההנחות שלו: כל הלייבלים
+ מתפלגים בצורה זהה )כלומר זהים בשונות( אך עם תוחלת אחרת.
+ ההנחה של ה
+\begin_inset Formula $GNB$
+\end_inset
+
+ שהדאטא מקיים אי-תלות בין הפיצ'רים לא נכונה כאן, ורואים שאחוזי ההצלחה שלו
+ נמוכים בהרבה, לעומת ה
+\begin_inset Formula $LDA$
+\end_inset
+
+ שפשוט לא מניח כלום לגבי תלות בין הפיצ'רים.
+ כמו כן 
+\begin_inset Formula $LDA$
+\end_inset
+
+ הוא ליניארי, ואכן אפשר לראות שניתן למתוח מישורים מפרידים בין כל שני לייבלים
+ שיצליחו להפריד בין שניהם בצורה טובה.
+\end_layout
+
+\end_body
+\end_document
