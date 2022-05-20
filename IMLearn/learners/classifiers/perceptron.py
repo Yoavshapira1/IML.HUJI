@@ -101,13 +101,12 @@ class Perceptron(BaseEstimator):
 
         for i in range (self.max_iter_):
             w_prev = self.coefs_
-            mask = np.zeros((y.shape))
-            mask[(X @ self.coefs_) * y <= 0] = 1
-            final_mask = y * mask
-            self.coefs_ = self.coefs_ + (X.T @ final_mask)
+            mask = y * ((X @ self.coefs_) * y <= 0)
+            self.coefs_ = self.coefs_ + (X.T @ mask)
             self.callback_(self, None, None)
             if np.equal(w_prev, self.coefs_).all():
                 return
+
 
     def _predict(self, X: np.ndarray) -> np.ndarray:
         """

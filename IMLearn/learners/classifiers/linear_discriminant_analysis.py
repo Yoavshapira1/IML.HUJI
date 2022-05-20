@@ -51,26 +51,22 @@ class LDA(BaseEstimator):
         m, d = X.shape
 
         # defining classes and pi
-        self.classes_, indices, counters = np.unique(y, return_counts=True, return_inverse=True)
-        self.pi_ = counters / m
+        self.classes_ = np.unique(y)
 
-        # estimates the mean vectors for every class
+        # Initialize empty matrices
         self.mu_ = np.empty(shape=(0, d))
-        for label, counter in zip(self.classes_, counters):
-            I = (y == label)
-            _s = X * I
-            s = np.sum(X * I, axis=0)
-            self.mu_ = np.r_[self.mu_, s.reshape(1,d) / counter]
-
-        # estimates the covariance matrix
         self.cov_ = np.zeros(shape=(d, d))
-        for x, mu in zip (X, self.mu_[indices]):
-            z_vec = (x - mu).reshape(d, 1)
-            self.cov_ += (z_vec * z_vec.T) / m
+        self.pi_ = []
 
-        # alternative better way to check:
-        # cov = (X - self.mu_[indices]) * (X - self.mu_[indices]).T
-        # self.cov_ = (cov @ cov.T) / m
+        # estimates the mean vectors for every class and the common covariance matrix
+
+        for c in self.classes_:
+            X_c = X[y == c]
+            mu = np.mean(X_c, axis=0)
+            pi = X_c.shape[0] / X.shape[0]
+            self.pi_ = np.r_[self.pi_, pi]
+            self.mu_ = np.r_[self.mu_, mu.reshape(1,d)]
+            self.cov_ += (X_c - mu).T @ (X_c - mu) / m
 
         self._cov_inv = inv(self.cov_)
 
@@ -89,8 +85,7 @@ class LDA(BaseEstimator):
             Predicted responses of given samples
         """
         likelihood = self.likelihood(X)
-        f = np.argmax(likelihood, axis=1)
-        return self.classes_[f]
+        return self.classes_[np.argmax(likelihood, axis=1)]
 
     def likelihood(self, X: np.ndarray) -> np.ndarray:
         """
@@ -114,7 +109,7 @@ class LDA(BaseEstimator):
         a = self._cov_inv @ self.mu_.T
 
         # Element b in the log-likelihood expression from recitation
-        b = np.log(self.pi_) -0.5 * np.diag(self.mu_ @ self._cov_inv @ self.mu_.T)
+        b = np.log(self.pi_) - 0.5 * np.diag(self.mu_ @ self._cov_inv @ self.mu_.T)
 
         return (X @ a) + b
 
@@ -138,5 +133,6 @@ class LDA(BaseEstimator):
         """
         return MCL(self.predict(X), y)
 
-    def get_mean_and_cov(self):
-        return self.mu_, self.cov_
+    def classes_mean_cov(self):
+        """Return a list of copies of the covariance matrix, in length of num(classes)"""
+        return self.mu_, [self.cov_] * self.classes_.shape[0]
