@@ -33,14 +33,16 @@ def select_polynomial_degree(n_samples: int = 100, noise: float = 5):
     """
     # Question 1 - Generate dataset for model f(x)=(x+3)(x+2)(x+1)(x-1)(x-2) + eps for eps Gaussian noise
     # and split into training- and testing portions
-    sd = np.sqrt(noise)
-    eps = np.random.normal(0, sd, n_samples)
-    X = np.random.standard_normal(n_samples)
+    eps = np.random.normal(0, noise, n_samples)
+    X = np.linspace(-1.2, 2, n_samples)
     y = f(X) + eps
-    X_train, y_train, X_test, y_test = split_train_test_numpy(X, y, 0.33)
+    X_train, y_train, X_test, y_test = split_train_test_numpy(X, y, 0.66)
     X_train, X_test = X_train.reshape(X_train.shape[0],), X_test.reshape(X_test.shape[0],)
-    plt.scatter(X_train, f(X_train), c='r', label='Train Set', alpha=0.8)
-    plt.scatter(X_test, f(X_test), c='b', label='Test Set', alpha=0.8)
+    plt.scatter(X, f(X), c='black', label='Noiseless Model', alpha=0.8)
+    plt.scatter(X_train, y_train, c='r', label='Train Set', alpha=0.8)
+    plt.scatter(X_test, y_test, c='b', label='Test Set', alpha=0.8)
+    plt.xlabel("x")
+    plt.ylabel("f(x)")
     plt.legend()
     plt.show()
 
@@ -52,6 +54,9 @@ def select_polynomial_degree(n_samples: int = 100, noise: float = 5):
         train_score, validation_score = cross_validate(PolynomialFitting(deg), X_train, y_train, MSE)
         tr_score.append(train_score)
         valid_score.append(validation_score)
+    min_valid = np.array([0 for x in range(11)], dtype=np.float)
+    min_valid[np.argmin(valid_score)] = np.min(valid_score)
+    best_fit = int(np.argmin(valid_score))
     barWidth = 0.25
     tr_bar = [x for x in range(11)]
     val_bar = [x + barWidth for x in range(11)]
@@ -59,21 +64,22 @@ def select_polynomial_degree(n_samples: int = 100, noise: float = 5):
             edgecolor='grey', label='Training score')
     plt.bar(val_bar, valid_score, color='g', width=barWidth,
             edgecolor='grey', label='Validation score')
-    plt.scatter([], [], label="Minimal validation MSE\nfound in degree %d" % np.argmin(valid_score))
-    best_fit = int(np.argmin(valid_score))
+    plt.bar(val_bar, min_valid, color='b', width=barWidth,
+            edgecolor='grey', label="Minimal validation MSE\nfound in degree %d" % np.argmin(valid_score))
     plt.xlabel('Polynom Degree')
-    plt.ylabel('MSE (log-scaled)')
+    plt.ylabel('MSE')
     plt.xticks([r + barWidth for r in range(len(tr_bar))], tr_bar)
     plt.legend()
-    plt.yscale('log')
     plt.show()
 
 
     # Question 3 - Using best value of k, fit a k-degree polynomial model and report test error
     poly = PolynomialFitting(best_fit)
     poly.fit(X_train, y_train)
-    loss = poly.loss(poly.predict(X_test), y_test)
-    print("test lss for k degree polynom: %f\nvalidation error: %f" % (loss, np.min(valid_score)))
+    loss = MSE(poly.predict(X_test), y_test)
+    print("degree: ", best_fit)
+    print("minimal validation error: ", np.min(valid_score))
+    print("test error: ", loss)
 
 
 def select_regularization_parameter(n_samples: int = 50, n_evaluations: int = 500):
@@ -101,4 +107,6 @@ def select_regularization_parameter(n_samples: int = 50, n_evaluations: int = 50
 
 if __name__ == '__main__':
     np.random.seed(0)
-    select_polynomial_degree()
+    select_polynomial_degree(n_samples=100, noise=5)
+    select_polynomial_degree(n_samples=100, noise=0)
+    select_polynomial_degree(n_samples=1500, noise=10)
