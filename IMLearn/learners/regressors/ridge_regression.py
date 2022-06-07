@@ -1,7 +1,11 @@
 from __future__ import annotations
 from typing import NoReturn
+
+from numpy.linalg import pinv
+
 from ...base import BaseEstimator
 from..regressors.linear_regression import LinearRegression
+from ...metrics import mean_square_error as MSE
 import numpy as np
 
 
@@ -43,7 +47,6 @@ class RidgeRegression(BaseEstimator):
         self.coefs_ = None
         self.include_intercept_ = include_intercept
         self.lam_ = lam
-        self.regressor = LinearRegression(include_intercept)
 
     def _fit(self, X: np.ndarray, y: np.ndarray) -> NoReturn:
         """
@@ -61,13 +64,16 @@ class RidgeRegression(BaseEstimator):
         -----
         Fits model with or without an intercept depending on value of `self.include_intercept_`
         """
-        n, d = X.shape
-        eye_lam = np.eye(d) * np.sqrt(self.lam_)
-        X_lam = np.vstack((X, eye_lam))
-        y_lam = np.vstack((X, np.zeros(d)))
-        self.regressor.fit(X_lam, y_lam)
-        self.coefs_ = self.regressor.coefs_
-        self.fit = True
+        if self.include_intercept_:
+            X = np.c_[np.ones((X.shape[0], 1)), X]
+
+        eye_lam = np.eye(X.shape[1]) * self.lam_
+        if self.include_intercept_:
+            eye_lam[0, 0] = 0
+
+        x_T_x = X.T @ X
+        self.coefs_ = np.linalg.inv(x_T_x + eye_lam) @ X.T @ y
+        self.fitted_ = True
 
     def _predict(self, X: np.ndarray) -> np.ndarray:
         """
@@ -83,7 +89,9 @@ class RidgeRegression(BaseEstimator):
         responses : ndarray of shape (n_samples, )
             Predicted responses of given samples
         """
-        return self.regressor.predict(X)
+        if self.include_intercept_:
+            X = np.c_[np.ones((X.shape[0], 1)), X]
+        return X @ self.coefs_
 
     def _loss(self, X: np.ndarray, y: np.ndarray) -> float:
         """
@@ -102,4 +110,4 @@ class RidgeRegression(BaseEstimator):
         loss : float
             Performance under MSE loss function
         """
-        return self.regressor.loss(X, y)
+        return MSE(y, self._predict(X))

@@ -26,11 +26,16 @@ if __name__ == "__main__":
     # print(score)
     # print(np.average(score))
 
-    a = np.ones(shape=(5,3))
-    lam = 9
-    eye_lam = np.eye(a.shape[1]) * np.sqrt(lam)
-    con = np.vstack((a, eye_lam))
-    print(con)
+    X = np.arange(30).reshape(10,3)
+    y = np.arange(10)
+    print(X)
+    print(y)
+    perm = np.random.permutation(X.shape[0])
+    X = X[perm]
+    y = y[perm]
+    print(perm)
+    print(X)
+    print(y)
 
 
 
