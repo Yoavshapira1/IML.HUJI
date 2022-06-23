@@ -1,11 +1,13 @@
 from typing import NoReturn
 
 import numpy as np
-
+from IMLearn.metrics.loss_functions import misclassification_error as MCE
 from IMLearn import BaseEstimator
 from IMLearn.desent_methods import GradientDescent
 from IMLearn.desent_methods.modules import LogisticModule, RegularizedModule, L1, L2
 
+def sigmoid(x):
+    return
 
 class LogisticRegression(BaseEstimator):
 
@@ -48,7 +50,17 @@ class LogisticRegression(BaseEstimator):
         Fits model using specified `self.optimizer_` passed when instantiating class and includes an intercept
         if specified by `self.include_intercept_
         """
-        raise NotImplementedError()
+        init = np.random.randn(X.shape[1]) / np.sqrt(X.shape[1])
+        if self.penalty_ == "l1":
+            reg_term = L1(init)
+        elif self.penalty_ == "l2":
+            reg_term = L2(init)
+        else:
+            reg_term = None
+
+        reg_module = RegularizedModule(LogisticModule(), reg_term, self.lam_, weights=init, include_intercept=self.include_intercept_)
+        self.solver_.fit(reg_module, X, y)
+        self.coefs_ = reg_module.weights
 
     def _predict(self, X: np.ndarray) -> np.ndarray:
         """
@@ -64,7 +76,7 @@ class LogisticRegression(BaseEstimator):
         responses : ndarray of shape (n_samples, )
             Predicted responses of given samples
         """
-        raise NotImplementedError()
+        return (self.predict_proba(X) > self.alpha_).astype(int)
 
     def predict_proba(self, X: np.ndarray) -> np.ndarray:
         """
@@ -80,7 +92,8 @@ class LogisticRegression(BaseEstimator):
         probabilities: ndarray of shape (n_samples,)
             Probability of each sample being classified as `1` according to the fitted model
         """
-        raise NotImplementedError()
+        return 1 / (1 + np.exp(-(X @ self.coefs_)))
+
 
     def _loss(self, X: np.ndarray, y: np.ndarray) -> float:
         """
@@ -99,4 +112,4 @@ class LogisticRegression(BaseEstimator):
         loss : float
             Performance under misclassification error
         """
-        raise NotImplementedError()
+        return MCE(y_true=y, y_pred=self.predict(X))
